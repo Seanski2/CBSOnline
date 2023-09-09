@@ -20,7 +20,8 @@
                 "target": "opponent-single",
                 "effects": {
                     "damage": "a.atk"
-                }
+                },
+                "counterEffects": {}
             },
             "placeholderMagicAttack": {
                 "displayName": "Placeholder",
@@ -29,7 +30,8 @@
                 "target": "opponent-single",
                 "effects": {
                     "damage": "a.mat"
-                }
+                },
+                "counterEffects": {}
             },
             "placeholderBuff": {
                 "displayName": "Placeholder",
@@ -40,7 +42,8 @@
                     "attack": "a.atk + 5",
                     "defense": "a.def + 5",
                     "health": "a.hp + 5"
-                }
+                },
+                "counterEffects": {}
             },
             "placeholderDebuff": {
                 "displayName": "Placeholder",
@@ -51,7 +54,8 @@
                     "speed": "b.spd - 5",
                     "defense": "b.def - 5",
                     "magicDefense": "b.mdf - 5"
-                }
+                },
+                "counterEffects": {}
             },
             "placeholderStrongMove": {
                 "displayName": "Placeholder",
@@ -59,9 +63,11 @@
                 "moveType": "magic-attack",
                 "target": "opponent-all",
                 "effects": {
-                    "damage": "a.mat * 4",
+                    "damage": "a.mat * 4"
+                },
+                "counterEffects": {
                     "speed": "a.spd - 10",
-                    "health": "a.hp - 5",
+                    "damage": "10 - a.def",
                     "defense": "a.def - 5"
                 }
             }
