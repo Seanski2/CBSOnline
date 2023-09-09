@@ -1,0 +1,58 @@
+{
+    "dummy": {
+        "displayName": "Dummy",
+        "description": "A placeholder character. Should only be used in testing.",
+        "sprite": "S05-4Boomaker.png",
+        "baseStats": {
+            "health": 20,
+            "speed": 20,
+            "magic": 20,
+            "attack": 5,
+            "defense": 5,
+            "magicAttack": 5,
+            "magicDefense": 5
+        },
+        "moves": {
+            "placeholderAttack": {
+                "displayName": "Placeholder",
+                "description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
+                "moveType": "attack",
+                "target": "opponent",
+                "effects": {
+                    "damage": 5
+                }
+            },
+            "placeholderMagicAttack": {
+                "displayName": "Placeholder",
+                "description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
+                "moveType": "magic-attack",
+                "target": "opponent",
+                "effects": {
+                    "damage": 5
+                }
+            },
+            "placeholderBuff": {
+                "displayName": "Placeholder",
+                "description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
+                "moveType": "status",
+                "target": "self",
+                "effects": {
+                    "attack": 5,
+                    "defense": 5,
+                    "health": 5
+                }
+            },
+            "placeholderDebuff": {
+                "displayName": "Placeholder",
+                "description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
+                "moveType": "status",
+                "target": "opponent",
+                "effects": {
+                    "speed": 5,
+                    "defense": 5,
+                    "magicDefense": 5
+                }
+            }
+        }
+    }
+}
