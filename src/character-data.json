@@ -31,7 +31,9 @@
                 "effects": {
                     "damage": "a.mat"
                 },
-                "counterEffects": {}
+                "counterEffects": {
+                    "magic": "a.mp - 5"
+                }
             },
             "placeholderBuff": {
                 "displayName": "Placeholder",
@@ -43,7 +45,9 @@
                     "defense": "a.def + 5",
                     "health": "a.hp + 5"
                 },
-                "counterEffects": {}
+                "counterEffects": {
+                    "magic": "a.mp - 5"
+                }
             },
             "placeholderDebuff": {
                 "displayName": "Placeholder",
@@ -55,7 +59,9 @@
                     "defense": "b.def - 5",
                     "magicDefense": "b.mdf - 5"
                 },
-                "counterEffects": {}
+                "counterEffects": {
+                    "magic": "a.mp - 10"
+                }
             },
             "placeholderStrongMove": {
                 "displayName": "Placeholder",
@@ -68,7 +74,8 @@
                 "counterEffects": {
                     "speed": "a.spd - 10",
                     "damage": "10 - a.def",
-                    "defense": "a.def - 5"
+                    "defense": "a.def - 5",
+                    "magic": "a.mp - 10"
                 }
             }
         }
