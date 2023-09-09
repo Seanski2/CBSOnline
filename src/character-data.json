@@ -19,9 +19,8 @@
                 "moveType": "attack",
                 "target": "opponent-single",
                 "effects": {
-                    "damage": 5
-                },
-                "counterEffects": {}
+                    "damage": "a.atk"
+                }
             },
             "placeholderMagicAttack": {
                 "displayName": "Placeholder",
@@ -29,9 +28,8 @@
                 "moveType": "magic-attack",
                 "target": "opponent-single",
                 "effects": {
-                    "damage": 5
-                },
-                "counterEffects": {}
+                    "damage": "a.mat"
+                }
             },
             "placeholderBuff": {
                 "displayName": "Placeholder",
@@ -39,11 +37,10 @@
                 "moveType": "status",
                 "target": "self-single",
                 "effects": {
-                    "attack": 5,
-                    "defense": 5,
-                    "health": 5
-                },
-                "counterEffects": {}
+                    "attack": "a.atk + 5",
+                    "defense": "a.def + 5",
+                    "health": "a.hp + 5"
+                }
             },
             "placeholderDebuff": {
                 "displayName": "Placeholder",
@@ -51,11 +48,10 @@
                 "moveType": "status",
                 "target": "opponent-random3",
                 "effects": {
-                    "speed": 5,
-                    "defense": 5,
-                    "magicDefense": 5
-                },
-                "counterEffects": {}
+                    "speed": "b.spd - 5",
+                    "defense": "b.def - 5",
+                    "magicDefense": "b.mdf - 5"
+                }
             },
             "placeholderStrongMove": {
                 "displayName": "Placeholder",
@@ -63,12 +59,10 @@
                 "moveType": "magic-attack",
                 "target": "opponent-all",
                 "effects": {
-                    "damage": 20
-                },
-                "counterEffects": {
-                    "speed": 10,
-                    "damage": 10,
-                    "defense": 5
+                    "damage": "a.mat * 4",
+                    "speed": "a.spd - 10",
+                    "health": "a.hp - 5",
+                    "defense": "a.def - 5"
                 }
             }
         }
