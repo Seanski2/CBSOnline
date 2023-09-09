@@ -17,40 +17,58 @@
                 "displayName": "Placeholder",
                 "description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
                 "moveType": "attack",
-                "target": "opponent",
+                "target": "opponent-single",
                 "effects": {
                     "damage": 5
-                }
+                },
+                "counterEffects": {}
             },
             "placeholderMagicAttack": {
                 "displayName": "Placeholder",
                 "description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
                 "moveType": "magic-attack",
-                "target": "opponent",
+                "target": "opponent-single",
                 "effects": {
                     "damage": 5
-                }
+                },
+                "counterEffects": {}
             },
             "placeholderBuff": {
                 "displayName": "Placeholder",
                 "description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
                 "moveType": "status",
-                "target": "self",
+                "target": "self-single",
                 "effects": {
                     "attack": 5,
                     "defense": 5,
                     "health": 5
-                }
+                },
+                "counterEffects": {}
             },
             "placeholderDebuff": {
                 "displayName": "Placeholder",
                 "description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
                 "moveType": "status",
-                "target": "opponent",
+                "target": "opponent-random3",
                 "effects": {
                     "speed": 5,
                     "defense": 5,
                     "magicDefense": 5
+                },
+                "counterEffects": {}
+            },
+            "placeholderStrongMove": {
+                "displayName": "Placeholder",
+                "description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
+                "moveType": "magic-attack",
+                "target": "opponent-all",
+                "effects": {
+                    "damage": 20
+                },
+                "counterEffects": {
+                    "speed": 10,
+                    "damage": 10,
+                    "defense": 5
                 }
             }
         }
