@@ -19,7 +19,7 @@
                 "moveType": "attack",
                 "target": "opponent-single",
                 "effects": {
-                    "damage": "a.atk"
+                    "damage": 5
                 },
                 "counterEffects": {}
             },
@@ -29,10 +29,10 @@
                 "moveType": "magic-attack",
                 "target": "opponent-single",
                 "effects": {
-                    "damage": "a.mat"
+                    "damage": 5
                 },
                 "counterEffects": {
-                    "magic": "a.mp - 5"
+                    "magic": 5
                 }
             },
             "placeholderBuff": {
@@ -41,12 +41,12 @@
                 "moveType": "status",
                 "target": "self-single",
                 "effects": {
-                    "attack": "a.atk + 5",
-                    "defense": "a.def + 5",
-                    "health": "a.hp + 5"
+                    "attack": 5,
+                    "defense": 5,
+                    "health": 5
                 },
                 "counterEffects": {
-                    "magic": "a.mp - 5"
+                    "magic": 5
                 }
             },
             "placeholderDebuff": {
@@ -55,12 +55,12 @@
                 "moveType": "status",
                 "target": "opponent-random3",
                 "effects": {
-                    "speed": "b.spd - 5",
-                    "defense": "b.def - 5",
-                    "magicDefense": "b.mdf - 5"
+                    "speed": 5,
+                    "defense": 5,
+                    "magicDefense": 5
                 },
                 "counterEffects": {
-                    "magic": "a.mp - 10"
+                    "magic": 10
                 }
             },
             "placeholderStrongMove": {
@@ -69,13 +69,13 @@
                 "moveType": "magic-attack",
                 "target": "opponent-all",
                 "effects": {
-                    "damage": "a.mat * 4"
+                    "damage": 20
                 },
                 "counterEffects": {
-                    "speed": "a.spd - 10",
-                    "damage": "10 - a.def",
-                    "defense": "a.def - 5",
-                    "magic": "a.mp - 10"
+                    "speed": 10,
+                    "damage": 10,
+                    "defense": 5,
+                    "magic": 10
                 }
             }
         }

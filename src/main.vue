@@ -1,6 +1,7 @@
 <script>
 
 import "./character-data.json";
+import "./element-chart.json";
 import "../assets";
 
 //globals
