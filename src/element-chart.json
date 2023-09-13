@@ -37,8 +37,53 @@
         "nature": 0.5
         "earth": 2,
         "toxic": 2,
-        "wind": 0.5,
+        "sound": 0.5,
         "paint": 2,
         "metal": 2
+    },
+    "nature": {
+        "fire": 0.5,
+        "ice": 0.5,
+        "water": 2,
+        "nature": 0.5
+        "earth": 2,
+        "toxic": 0.5,
+        "darkness": 0.5,
+        "metal": 0.5,
+        "undead": 2
+    },
+    "earth": {
+        "fire": 2,
+        "electric": 2,
+        "nature": 0.5
+        "earth": 0.5,
+        "toxic": 2,
+        "wind": 0,
+        "sound": 0.5,
+        "paint": 2,
+        "metal": 2
+    },
+    "toxic": {
+        "water": 2,
+        "nature": 2,
+        "earth": 0,
+        "toxic": 0.5,
+        "darkness": 0.5,
+        "metal": 0,
+        "undead": 0.5
+    },
+    "wind": {
+        "fire": 0.5,
+        "sound": 0.5,
+        "magic": 2,
+        "astral": 0,
+        "metal": 2
+    },
+    "sound": {
+        "water": 2,
+        "earth": 2,
+        "wind": 2,
+        "astral": 0.5,
+        "undead": 0.5
     }
 }
