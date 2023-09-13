@@ -85,5 +85,13 @@
         "wind": 2,
         "astral": 0.5,
         "undead": 0.5
-    }
+    },
+      "magic": {
+        "nature": 2,
+        "sound": 2,
+        "aura": 2,
+        "light": 0.5
+        "darkness": 0.5
+        "undead": 0.5
+      }
 }
