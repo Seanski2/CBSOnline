@@ -67,7 +67,11 @@
                 "effects": {
                     "speed": 5,
                     "defense": 5,
-                    "magicDefense": 5
+                    "magicDefense": 5,
+                    "state": {
+                        "id": "example",
+                        "chance": 25
+                    },
                 },
                 "counterEffects": {}
             },
