@@ -29,6 +29,16 @@
         "earth": 0,
         "wind": 2,
         "magic": 0.5,
-        "metal": 0.5,
+        "metal": 0.5
     },
+    "water": {
+        "fire": 2,
+        "water": 0.5,
+        "nature": 0.5
+        "earth": 2,
+        "toxic": 2,
+        "wind": 0.5,
+        "paint": 2,
+        "metal": 2
+    }
 }
