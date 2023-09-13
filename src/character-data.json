@@ -14,10 +14,12 @@
             "magicAttack": 5,
             "magicDefense": 5
         },
+        "defaultAttackDescription": "Placeholder Text",
         "moves": {
             "placeholderAttack": {
                 "displayName": "Placeholder",
                 "description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
+                "useText": "Placeholder",
                 "moveType": "attack",
                 "element": "physical",
                 "magicCost": 0,
@@ -31,6 +33,7 @@
             "placeholderMagicAttack": {
                 "displayName": "Placeholder",
                 "description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
+                "useText": "Placeholder",
                 "moveType": "magic-attack",
                 "element": "physical",
                 "magicCost": 5,
@@ -44,6 +47,7 @@
             "placeholderBuff": {
                 "displayName": "Placeholder",
                 "description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
+                "useText": "Placeholder",
                 "moveType": "status",
                 "element": "physical",
                 "magicCost": 5,
@@ -59,6 +63,7 @@
             "placeholderDebuff": {
                 "displayName": "Placeholder",
                 "description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
+                "useText": "Placeholder",
                 "moveType": "status",
                 "element": "physical",
                 "magicCost": 10,
@@ -78,6 +83,7 @@
             "placeholderStrongMove": {
                 "displayName": "Placeholder",
                 "description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
+                "useText": "Placeholder",
                 "moveType": "magic-attack",
                 "element": "physical",
                 "magicCost": 10,
@@ -109,10 +115,12 @@
             "magicAttack": 35,
             "magicDefense": 26
         },
+        "defaultAttackDescription": "Placeholder Text",
         "moves": {
             "shockPalm": {
                 "displayName": "Shock Palm",
                 "description": "Zee outstretches their hand while it's covered with electricity. This deals minor physical electric damage and has a high chance to stun the foe.",
+                "useText": "Placeholder",
                 "moveType": "attack",
                 "element": "physical",
                 "magicCost": 7,
@@ -126,6 +134,7 @@
             "placeholderMagicAttack": {
                 "displayName": "Placeholder",
                 "description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
+                "useText": "Placeholder",
                 "moveType": "magic-attack",
                 "element": "physical",
                 "magicCost": 5,
@@ -139,6 +148,7 @@
             "placeholderBuff": {
                 "displayName": "Placeholder",
                 "description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
+                "useText": "Placeholder",
                 "moveType": "status",
                 "element": "physical",
                 "magicCost": 5,
@@ -154,6 +164,7 @@
             "placeholderDebuff": {
                 "displayName": "Placeholder",
                 "description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
+                "useText": "Placeholder",
                 "moveType": "status",
                 "element": "physical",
                 "magicCost": 10,
@@ -169,6 +180,7 @@
             "placeholderStrongMove": {
                 "displayName": "Placeholder",
                 "description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
+                "useText": "Placeholder",
                 "moveType": "magic-attack",
                 "element": "physical",
                 "magicCost": 10,
