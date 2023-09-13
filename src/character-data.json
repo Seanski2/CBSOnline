@@ -89,7 +89,7 @@
                 }
             }
         }
-    }
+    },
 "zee": {
         "displayName": "Zee",
         "description": "temp",
@@ -108,14 +108,14 @@
         "moves": {
             "shockPalm": {
                 "displayName": "Shock Palm",
-                "description": "Zee outstretches their hand,.",
+                "description": "Zee outstretches their hand while it's covered with electricity. This deals minor physical electric damage and has a high chance to stun the foe.",
                 "moveType": "attack",
                 "element": "physical",
-                "magicCost": 0,
+                "magicCost": 7,
                 "target": "opponent-single",
                 "attackRepeat": 0,
                 "effects": {
-                    "damage": 5
+                    "damage": 3
                 },
                 "counterEffects": {}
             },
