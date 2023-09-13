@@ -85,4 +85,90 @@
             }
         }
     }
+"zee": {
+        "displayName": "Zee",
+        "description": "temp",
+        "sprite": "S01-1Zee.png",
+        "element1": "metal",
+        "element2": "electric",
+        "baseStats": {
+            "health": 495,
+            "speed": 36,
+            "magic": 85,
+            "attack": 26,
+            "defense": 34,
+            "magicAttack": 35,
+            "magicDefense": 26
+        },
+        "moves": {
+            "shockPalm": {
+                "displayName": "Shock Palm",
+                "description": "Zee outstretches their hand,.",
+                "moveType": "attack",
+                "element": "physical",
+                "magicCost": 0,
+                "target": "opponent-single",
+                "effects": {
+                    "damage": 5
+                },
+                "counterEffects": {}
+            },
+            "placeholderMagicAttack": {
+                "displayName": "Placeholder",
+                "description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
+                "moveType": "magic-attack",
+                "element": "physical",
+                "magicCost": 5,
+                "target": "opponent-single",
+                "effects": {
+                    "damage": 5
+                },
+                "counterEffects": {}
+            },
+            "placeholderBuff": {
+                "displayName": "Placeholder",
+                "description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
+                "moveType": "status",
+                "element": "physical",
+                "magicCost": 5,
+                "target": "self-single",
+                "effects": {
+                    "attack": 5,
+                    "defense": 5,
+                    "health": 5
+                },
+                "counterEffects": {}
+            },
+            "placeholderDebuff": {
+                "displayName": "Placeholder",
+                "description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
+                "moveType": "status",
+                "element": "physical",
+                "magicCost": 10,
+                "target": "opponent-random3",
+                "effects": {
+                    "speed": 5,
+                    "defense": 5,
+                    "magicDefense": 5
+                },
+                "counterEffects": {}
+            },
+            "placeholderStrongMove": {
+                "displayName": "Placeholder",
+                "description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
+                "moveType": "magic-attack",
+                "element": "physical",
+                "magicCost": 10,
+                "target": "opponent-all",
+                "effects": {
+                    "damage": 20
+                },
+                "counterEffects": {
+                    "speed": 10,
+                    "damage": 10,
+                    "defense": 5
+                }
+            }
+        }
+    }
 }
