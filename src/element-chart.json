@@ -3,5 +3,32 @@
         "element1": 0,
         "element2": 0.5,
         "element3": 2
-    }
+    },
+    "fire": {
+        "fire": 0.5,
+        "ice": 2,
+        "water": 0.5,
+        "nature": 2,
+        "earth": 0.5,
+        "magic": 0.5,
+        "metal": 2,
+        "undead": 2
+    },
+    "ice": {
+        "fire": 0.5,
+        "ice": 0.5,
+        "nature": 2,
+        "earth": 2,
+        "magic": 0.5,
+        "metal": 0.5,
+        "undead": 2
+    },
+    "electric": {
+        "electric": 0.5,
+        "water": 2,
+        "earth": 0,
+        "wind": 2,
+        "magic": 0.5,
+        "metal": 0.5,
+    },
 }
