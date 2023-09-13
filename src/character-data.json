@@ -3,6 +3,8 @@
         "displayName": "Dummy",
         "description": "A placeholder character. Should only be used in testing.",
         "sprite": "S05-4Boomaker.png",
+        "element1": "physical",
+        "element2": "physical",
         "baseStats": {
             "health": 20,
             "speed": 20,
@@ -17,9 +19,11 @@
                 "displayName": "Placeholder",
                 "description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
                 "moveType": "attack",
+                "element": "physical",
+                "magicCost": 0,
                 "target": "opponent-single",
                 "effects": {
-                    "damage": "a.atk"
+                    "damage": 5
                 },
                 "counterEffects": {}
             },
@@ -27,55 +31,56 @@
                 "displayName": "Placeholder",
                 "description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
                 "moveType": "magic-attack",
+                "element": "physical",
+                "magicCost": 5,
                 "target": "opponent-single",
                 "effects": {
-                    "damage": "a.mat"
+                    "damage": 5
                 },
-                "counterEffects": {
-                    "magic": "a.mp - 5"
-                }
+                "counterEffects": {}
             },
             "placeholderBuff": {
                 "displayName": "Placeholder",
                 "description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
                 "moveType": "status",
+                "element": "physical",
+                "magicCost": 5,
                 "target": "self-single",
                 "effects": {
-                    "attack": "a.atk + 5",
-                    "defense": "a.def + 5",
-                    "health": "a.hp + 5"
+                    "attack": 5,
+                    "defense": 5,
+                    "health": 5
                 },
-                "counterEffects": {
-                    "magic": "a.mp - 5"
-                }
+                "counterEffects": {}
             },
             "placeholderDebuff": {
                 "displayName": "Placeholder",
                 "description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
                 "moveType": "status",
+                "element": "physical",
+                "magicCost": 10,
                 "target": "opponent-random3",
                 "effects": {
-                    "speed": "b.spd - 5",
-                    "defense": "b.def - 5",
-                    "magicDefense": "b.mdf - 5"
+                    "speed": 5,
+                    "defense": 5,
+                    "magicDefense": 5
                 },
-                "counterEffects": {
-                    "magic": "a.mp - 10"
-                }
+                "counterEffects": {}
             },
             "placeholderStrongMove": {
                 "displayName": "Placeholder",
                 "description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
                 "moveType": "magic-attack",
+                "element": "physical",
+                "magicCost": 10,
                 "target": "opponent-all",
                 "effects": {
-                    "damage": "a.mat * 4"
+                    "damage": 20
                 },
                 "counterEffects": {
-                    "speed": "a.spd - 10",
-                    "damage": "10 - a.def",
-                    "defense": "a.def - 5",
-                    "magic": "a.mp - 10"
+                    "speed": 10,
+                    "damage": 10,
+                    "defense": 5
                 }
             }
         }
