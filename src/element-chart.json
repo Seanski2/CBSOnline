@@ -90,7 +90,7 @@
         "nature": 2,
         "sound": 2,
         "aura": 2,
-        "light": 0.5
+        "light": 0.5,
         "darkness": 0.5
         "undead": 0.5
     },
@@ -98,30 +98,54 @@
         "toxic": 2,
         "astral": 0.5,
         "light": 2,
-        "darkness": 2
-        "paint": 0.5
+        "darkness": 2,
+        "paint": 0.5,
         "undead": 0.5
     },
       "astral": {
         "wind": 2,
         "sound": 2,
         "aura": 0.5,
-        "light": 2
+        "light": 2,
         "metal": 0.5
     },
       "light": {
         "nature": 0,
         "magic": 2,
         "aura": 0,
-        "light": 0.5
+        "light": 0.5,
         "darkness": 2
     },
       "darkness": {
         "fire": 0.5,
-        "nature": 2
+        "nature": 2,
         "magic": 2,
         "aura": 0,
-        "light": 2
+        "light": 2,
+        "darkness": 0.5
+    },
+      "paint": {
+        "water": 2,
+        "earth": 0.5,
+        "magic": 2,
+        "aura": 2,
+        "paint": 0.5,
+        "metal": 0.5
+      },
+    "metal": {
+        "fire": 0.5,
+        "earth": 2,
+        "toxic": 2,
+        "astral": 2,
+        "paint": 2,
+        "metal": 0.5
+      },
+    "undead": {
+        "nature": 0.5,
+        "toxic": 0.5,
+        "magic": 2,
+        "aura": 2,
         "darkness": 0.5
       }
+    
 }
