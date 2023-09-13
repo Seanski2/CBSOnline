@@ -93,5 +93,35 @@
         "light": 0.5
         "darkness": 0.5
         "undead": 0.5
+    },
+      "aura": {
+        "toxic": 2,
+        "astral": 0.5,
+        "light": 2,
+        "darkness": 2
+        "paint": 0.5
+        "undead": 0.5
+    },
+      "astral": {
+        "wind": 2,
+        "sound": 2,
+        "aura": 0.5,
+        "light": 2
+        "metal": 0.5
+    },
+      "light": {
+        "nature": 0,
+        "magic": 2,
+        "aura": 0,
+        "light": 0.5
+        "darkness": 2
+    },
+      "darkness": {
+        "fire": 0.5,
+        "nature": 2
+        "magic": 2,
+        "aura": 0,
+        "light": 2
+        "darkness": 0.5
       }
 }
