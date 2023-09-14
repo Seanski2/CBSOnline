@@ -100,99 +100,90 @@
             }
         }
     },
-"zee": {
+    "zee-offense": {
         "displayName": "Zee",
-        "description": "temp",
+        "description": "Placeholder.",
         "sprite": "S01-1Zee.png",
         "element1": "metal",
         "element2": "electric",
         "baseStats": {
-            "health": 495,
+            "health": 490,
             "speed": 36,
-            "magic": 85,
-            "attack": 26,
-            "defense": 34,
+            "magic": 75,
+            "attack": 35,
+            "defense": 24,
             "magicAttack": 35,
-            "magicDefense": 26
+            "magicDefense": 24
         },
-        "defaultAttackText": "Placeholder Text",
+        "defaultAttackText": "Zee kicks @!",
         "moves": {
             "shockPalm": {
                 "displayName": "Shock Palm",
-                "description": "Zee outstretches their hand while it's covered with electricity. This deals minor physical electric damage and has a high chance to stun the foe.",
-                "useText": "Placeholder",
-                "moveType": "attack",
-                "element": "physical",
+                "description": "Zee extends their palm out, engulfed in an electric current. This deals minor electric damage and has a high chance to stun the target.",
+                "useText": "Zee reaches an electrified palm out to @!",
+                "moveType": "magic-attack",
+                "element": "electric",
                 "magicCost": 7,
                 "target": "opponent-single",
                 "attackRepeat": 0,
                 "effects": {
+                    "damage": 4
+                },
+                "counterEffects": {
+                    "state": {
+                        "id": "stun",
+                        "chance": 15
+                    },
+                },
+            },
+            "taserShots": {
+                "displayName": "Taser Shots",
+                "description": "Zee shoots out two electrified taser darts, dealing minor electric damage to two random opponents with a small chance to stun them.",
+                "useText": "Shoots out two electric taser darts!",
+                "moveType": "magic-attack",
+                "element": "electric",
+                "magicCost": 14,
+                "target": "opponent-random2",
+                "attackRepeat": 0,
+                "effects": {
                     "damage": 3
                 },
-                "counterEffects": {}
+                "counterEffects": {
+                    "state": {
+                        "id": "stun",
+                        "chance": 15
+                    },
+                },
             },
-            "placeholderMagicAttack": {
-                "displayName": "Placeholder",
-                "description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
-                "useText": "Placeholder",
+            "holoBlade": {
+                "displayName": "Holo-Blade",
+                "description": "Zee shoots out a curved blade projectile with the swing of their hand, dealing solid aura damage.",
+                "useText": "Shoots out a holo-blade at @!",
                 "moveType": "magic-attack",
-                "element": "physical",
-                "magicCost": 5,
+                "element": "aura",
+                "magicCost": 12,
                 "target": "opponent-single",
                 "attackRepeat": 0,
                 "effects": {
-                    "damage": 5
+                    "damage": 6
                 },
                 "counterEffects": {}
             },
-            "placeholderBuff": {
-                "displayName": "Placeholder",
-                "description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
-                "useText": "Placeholder",
+            "defenseMode": {
+                "displayName": "Defense Mode",
+                "description": "Zee enters defense mode, changing their moves and stats in order to better protect themself and their allies.",
+                "useText": "Zee enters defense mode!",
                 "moveType": "status",
-                "element": "physical",
-                "magicCost": 5,
+                "element": "metal",
+                "magicCost": 15,
                 "target": "self-single",
                 "attackRepeat": 0,
                 "effects": {
-                    "attack": 5,
-                    "defense": 5,
-                    "health": 5
+                    "state": {
+                        "id": "hi mm",
+                        "chance": 100   
                 },
                 "counterEffects": {}
-            },
-            "placeholderDebuff": {
-                "displayName": "Placeholder",
-                "description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
-                "useText": "Placeholder",
-                "moveType": "status",
-                "element": "physical",
-                "magicCost": 10,
-                "target": "opponent-random3",
-                "attackRepeat": 0,
-                "effects": {
-                    "speed": 5,
-                    "defense": 5,
-                    "magicDefense": 5
-                },
-                "counterEffects": {}
-            },
-            "placeholderStrongMove": {
-                "displayName": "Placeholder",
-                "description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
-                "useText": "Placeholder",
-                "moveType": "magic-attack",
-                "element": "physical",
-                "magicCost": 10,
-                "target": "opponent-all",
-                "attackRepeat": 0,
-                "effects": {
-                    "damage": 20
-                },
-                "counterEffects": {
-                    "speed": 10,
-                    "damage": 10,
-                    "defense": 5
                 }
             }
         }
