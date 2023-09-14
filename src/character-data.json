@@ -24,7 +24,9 @@
                 "element": "physical",
                 "magicCost": 0,
                 "target": "opponent-single",
-                "attackRepeat": 0,
+                "attackRepeatMin": 0,
+                "attackRepeatMax": 0,
+                "accuracy": 90,
                 "effects": {
                     "damage": 5
                 },
@@ -38,7 +40,9 @@
                 "element": "physical",
                 "magicCost": 5,
                 "target": "opponent-single",
-                "attackRepeat": 0,
+                "attackRepeatMin": 0,
+                "attackRepeatMax": 1,
+                "accuracy": 75,
                 "effects": {
                     "damage": 5
                 },
@@ -52,7 +56,9 @@
                 "element": "physical",
                 "magicCost": 5,
                 "target": "self-single",
-                "attackRepeat": 0,
+                "attackRepeatMin": 0,
+                "attackRepeatMax": 0,
+                "accuracy": 100,
                 "effects": {
                     "attack": 5,
                     "defense": 5,
@@ -68,7 +74,9 @@
                 "element": "physical",
                 "magicCost": 10,
                 "target": "opponent-random3",
-                "attackRepeat": 0,
+                "attackRepeatMin": 0,
+                "attackRepeatMax": 0,
+                "accuracy": 50,
                 "effects": {
                     "speed": 5,
                     "defense": 5,
@@ -88,7 +96,9 @@
                 "element": "physical",
                 "magicCost": 10,
                 "target": "opponent-all",
-                "attackRepeat": 0,
+                "attackRepeatMin": 0,
+                "attackRepeatMax": 0,
+                "accuracy": 33,
                 "effects": {
                     "damage": 20
                 },
@@ -125,7 +135,9 @@
                 "element": "electric",
                 "magicCost": 7,
                 "target": "opponent-single",
-                "attackRepeat": 0,
+                "attackRepeatMin": 0,
+                "attackRepeatMax": 0,
+                "accuracy": 90,
                 "effects": {
                     "damage": 4
                 },
@@ -144,7 +156,9 @@
                 "element": "electric",
                 "magicCost": 14,
                 "target": "opponent-random2",
-                "attackRepeat": 0,
+                "attackRepeatMin": 0,
+                "attackRepeatMax": 0,
+                "accuracy": 90,
                 "effects": {
                     "damage": 3
                 },
@@ -163,7 +177,9 @@
                 "element": "aura",
                 "magicCost": 12,
                 "target": "opponent-single",
-                "attackRepeat": 0,
+                "attackRepeatMin": 0,
+                "attackRepeatMax": 0,
+                "accuracy": 90,
                 "effects": {
                     "damage": 6
                 },
@@ -177,7 +193,9 @@
                 "element": "metal",
                 "magicCost": 15,
                 "target": "self-single",
-                "attackRepeat": 0,
+                "attackRepeatMin": 0,
+                "attackRepeatMax": 0,
+                "accuracy": 90,
                 "effects": {
                     "state": {
                         "id": "hi mm",
