@@ -137,7 +137,7 @@
                 "target": "opponent-single",
                 "attackRepeatMin": 0,
                 "attackRepeatMax": 0,
-                "accuracy": 90,
+                "accuracy": 100,
                 "effects": {
                     "damage": 4
                 },
@@ -150,7 +150,7 @@
             },
             "taserShots": {
                 "displayName": "Taser Shots",
-                "description": "Zee shoots out two electrified taser darts, dealing minor electric damage to two random opponents with a small chance to stun them.",
+                "description": "Zee shoots out two electrified taser darts, dealing minor electric damage to two random opponents with a small chance to stun them. Has a small chance to miss.",
                 "useText": "Shoots out two electric taser darts!",
                 "moveType": "magic-attack",
                 "element": "electric",
@@ -158,7 +158,7 @@
                 "target": "opponent-random2",
                 "attackRepeatMin": 0,
                 "attackRepeatMax": 0,
-                "accuracy": 90,
+                "accuracy": 80,
                 "effects": {
                     "damage": 3
                 },
@@ -171,7 +171,7 @@
             },
             "holoBlade": {
                 "displayName": "Holo-Blade",
-                "description": "Zee shoots out a curved blade projectile with the swing of their hand, dealing solid aura damage.",
+                "description": "Zee shoots out a curved blade projectile with the swing of their hand, dealing solid aura damage. Has a small chance to miss.",
                 "useText": "Shoots out a holo-blade at @!",
                 "moveType": "magic-attack",
                 "element": "aura",
@@ -195,7 +195,7 @@
                 "target": "self-single",
                 "attackRepeatMin": 0,
                 "attackRepeatMax": 0,
-                "accuracy": 90,
+                "accuracy": 100,
                 "effects": {
                     "state": {
                         "id": "hi mm",
