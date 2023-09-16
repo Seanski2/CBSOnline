@@ -17,5 +17,10 @@
     "element": "electric",
     "image": "ZeeForceField.png"
   }
-}
+  "flames": {
+    "name": "Flames",
+    "description": "An ailment which causes damage over time- since, y'know, the subject is on fire. Changes the subject's attack type to fire, and cuts the subject's defense stat in half. Is automatically put out after 3-4 turns, or after getting hit with a water attack.",
+    "element": "fire",
+    "image": "Flames.png"
+  }
 }

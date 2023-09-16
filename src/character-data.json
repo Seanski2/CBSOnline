@@ -6,13 +6,13 @@
         "element1": "none",
         "element2": "none",
         "baseStats": {
-            "health": 20,
-            "speed": 20,
-            "magic": 20,
-            "attack": 5,
-            "defense": 5,
-            "magicAttack": 5,
-            "magicDefense": 5
+            "health": 500,
+            "speed": 30,
+            "magic": 70,
+            "attack": 30,
+            "defense": 30,
+            "magicAttack": 30,
+            "magicDefense": 30
         },
         "defaultAttackText": "Placeholder Text",
         "moves": {
@@ -146,13 +146,13 @@
                 "accuracy": 100,
                 "effects": {
                     "damage": 4
-                },
-                "counterEffects": {
                     "state": {
                         "id": "stun",
                         "chance": 15
-                    },
+                    }
                 },
+                "counterEffects": {}
+                }
             },
             "taserShots": {
                 "displayName": "Taser Shots",
@@ -168,13 +168,13 @@
                 "accuracy": 80,
                 "effects": {
                     "damage": 3
-                },
-                "counterEffects": {
                     "state": {
                         "id": "stun",
                         "chance": 15
-                    },
+                    }
                 },
+                "counterEffects": {}
+                }
             },
             "holoBlade": {
                 "displayName": "Holo-Blade",
@@ -378,6 +378,89 @@
                 "effects": {
                     "attack": 2,
                     "speed": 2
+                },
+                "counterEffects": {}
+            }
+        }
+    },
+    "ken": {
+        "displayName": "Ken",
+        "description": "Placeholder.",
+        "sprite": "S01-3Ken.png",
+        "element1": "fire",
+        "element2": "none",
+        "baseStats": {
+            "health": 580,
+            "speed": 12,
+            "magic": 50,
+            "attack": 45,
+            "defense": 39,
+            "magicAttack": 29,
+            "magicDefense": 25
+        },
+        "defaultAttackText": "Ken punches @!",
+        "moves": {
+            "fireBlast": {
+                "displayName": "Fire Blast",
+                "description": "Ken shoots a massive fire blast from his hands, dealing solid fire damage to one enemy with a chance to set them on fire. May miss.",
+                "useText": "Ken shoots out a fire blast at @!",
+                "moveType": "magic-attack",
+                "element": "fire",
+                "magicCost": 17,
+                "target": "opponent-single",
+                "label": "projectile",
+                "attackRepeatMin": 0,
+                "attackRepeatMax": 0,
+                "accuracy": 90,
+                "effects": {
+                    "damage": 7
+                    "state": {
+                        "id": "flames",
+                        "chance": 60
+                    }
+                },
+                "counterEffects": {}
+            },
+            "flamingBullets": {
+                "displayName": "Flaming Bullets",
+                "description": "Ken shoots a barrage of flaming bullets, hitting two enemies one to three times, each with a small chance to light the enemy on fire or to miss.",
+                "useText": "Ken shoots out a barrage of flaming bullets!",
+                "moveType": "magic-attack",
+                "element": "fire",
+                "magicCost": 25,
+                "target": "opponent-random2",
+                "label": "projectile",
+                "attackRepeatMin": 0,
+                "attackRepeatMax": 2,
+                "accuracy": 80,
+                "effects": {
+                    "damage": 3
+                    "state": {
+                        "id": "flames",
+                        "chance": 15
+                    }
+                },
+                "counterEffects": {}
+            },
+            "eruption": {
+                "displayName": "Eruption",
+                "description": "Ken stores his energy, waiting to be hit. If Ken is attacked during the turn, he takes reduced damage and explodes, sending a massive shockwave of fire out to hit all enemies and potentially light them on fire.",
+                "chargeText": "Ken is storing his energy."
+                "useText": "Ken explodes into a shockwave of flames!",
+                "moveType": "magic-counter",
+                "element": "fire",
+                "magicCost": 15,
+                "target": "opponent-all",
+                "label": "projectile",
+                "attackRepeatMin": 0,
+                "attackRepeatMax": 0,
+                "accuracy": 100,
+                "effects": {
+                    "damage": 7
+                    "state": {
+                        "id": "flames",
+                        "chance": 50
+                    }
                 },
                 "counterEffects": {}
             }
