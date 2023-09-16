@@ -118,19 +118,19 @@
     "zee-offense": {
         "displayName": "Zee",
         "description": "Placeholder.",
-        "sprite": "S01-1Zee.png",
+        "sprite": "S01-1ZeeOffense.png",
         "element1": "metal",
         "element2": "electric",
         "baseStats": {
             "health": 490,
-            "speed": 36,
+            "speed": 33,
             "magic": 75,
             "attack": 35,
             "defense": 24,
             "magicAttack": 35,
             "magicDefense": 24
         },
-        "defaultAttackText": "Zee kicks @!",
+        "defaultAttackText": "Zee roundhouse kicks @!",
         "moves": {
             "shockPalm": {
                 "displayName": "Shock Palm",
@@ -140,7 +140,7 @@
                 "element": "electric",
                 "magicCost": 7,
                 "target": "opponent-single",
-                "label": "Placeholder",
+                "label": "projectile",
                 "attackRepeatMin": 0,
                 "attackRepeatMax": 0,
                 "accuracy": 100,
@@ -162,7 +162,7 @@
                 "element": "electric",
                 "magicCost": 14,
                 "target": "opponent-random2",
-                "label": "Placeholder",
+                "label": "projectile",
                 "attackRepeatMin": 0,
                 "attackRepeatMax": 0,
                 "accuracy": 80,
@@ -184,7 +184,7 @@
                 "element": "aura",
                 "magicCost": 12,
                 "target": "opponent-single",
-                "label": "Placeholder",
+                "label": "projectile",
                 "attackRepeatMin": 0,
                 "attackRepeatMax": 0,
                 "accuracy": 90,
@@ -199,9 +199,103 @@
                 "useText": "Zee enters defense mode!",
                 "moveType": "status",
                 "element": "metal",
-                "magicCost": 15,
+                "magicCost": 5,
                 "target": "self-single",
-                "label": "Placeholder",
+                "label": "none",
+                "attackRepeatMin": 0,
+                "attackRepeatMax": 0,
+                "accuracy": 100,
+                "effects": {
+                    "state": {
+                        "id": "hi mm",
+                        "chance": 100   
+                },
+                "counterEffects": {}
+                }
+            }
+        }
+    },
+    "zeeDefense": {
+        "displayName": "Zee",
+        "description": "Placeholder.",
+        "sprite": "S01-1ZeeDefense.png",
+        "element1": "metal",
+        "element2": "electric",
+        "baseStats": {
+            "health": 490,
+            "speed": 33,
+            "magic": 75,
+            "attack": 24,
+            "defense": 35,
+            "magicAttack": 24,
+            "magicDefense": 35
+        },
+        "defaultAttackText": "Zee roundhouse kicks @!",
+        "moves": {
+            "holoShield": {
+                "displayName": "Holo-Shield",
+                "description": "Zee summons a holographic shield in front of an ally, boosting their defense temporarily.",
+                "useText": "Zee summons a holographic shield in front of @!",
+                "moveType": "status",
+                "element": "aura",
+                "magicCost": 6,
+                "target": "ally-single",
+                "label": "None",
+                "attackRepeatMin": 0,
+                "attackRepeatMax": 0,
+                "accuracy": 100,
+                "effects": {
+                    "defense": 2,
+                },
+                "counterEffects": {}
+            },
+            "forceField": {
+                "displayName": "Force Field",
+                "description": "Zee summons an electrical force field around an ally. If an enemy makes contact with this ally, then they'll be stunned and receive minor damage, also causing the force field to disappear.",
+                "useText": "Zee summons a force field around @!",
+                "useText": "Placeholder",
+                "moveType": "status",
+                "element": "electric",
+                "magicCost": 10,
+                "target": "ally-single",
+                "label": "None",
+                "attackRepeatMin": 0,
+                "attackRepeatMax": 0,
+                "accuracy": 100,
+                "effects": {
+                    "state": {
+                        "id": "zeeForceField",
+                        "chance": 100
+                    },
+                },
+                "counterEffects": {}
+            },
+            "medKit": {
+                "displayName": "Med Kit",
+                "description": "Zee pulls out a med kit, healing 25% of an ally's HP.",
+                "useText": "Zee pulls out a med kit and fixes @ up!",
+                "moveType": "status",
+                "element": "aura",
+                "magicCost": 14,
+                "target": "ally-single",
+                "label": "None",
+                "attackRepeatMin": 0,
+                "attackRepeatMax": 0,
+                "accuracy": 100,
+                "effects": {
+                    "health": 25
+                },
+                "counterEffects": {}
+            },
+            "offenseMode": {
+                "displayName": "Offense Mode",
+                "description": "Zee enters offense mode, changing their moves and stats in order to better attack and neutralize the opponents.",
+                "useText": "Zee enters offense mode!",
+                "moveType": "status",
+                "element": "metal",
+                "magicCost": 5,
+                "target": "self-single",
+                "label": "none",
                 "attackRepeatMin": 0,
                 "attackRepeatMax": 0,
                 "accuracy": 100,

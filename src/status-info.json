@@ -2,6 +2,20 @@
   "exampleStatus": {
     "name": "Placeholder",
     "description": "text",
-    "element": "none"
+    "element": "none",
+    "image": "Stun.png"
+  },
+  "stun": {
+    "name": "Stun",
+    "description": "An ailment which prevents the subject from moving sometimes. Is automatically cured after 3-4 turns.",
+    "element": "electric",
+    "image": "Stun.png"
   }
+    "zeeForceField": {
+    "name": "Zee's Force Field",
+    "description": "A force field surrounding the current subject. Electrifies anyone who attacks the subject, stunning them and dealing minor electric damage while the subject only receives half of the damage dealt. Disappears automatically after four turns, or after the subject is hit.",
+    "element": "electric",
+    "image": "ZeeForceField.png"
+  }
+}
 }
