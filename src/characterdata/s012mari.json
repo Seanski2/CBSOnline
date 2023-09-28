@@ -1,0 +1,76 @@
+{
+    "mari": {
+        "displayName": "Mari",
+        "description": "Placeholder.",
+        "sprite": "S01-2Mari.png",
+        "element1": "metal",
+        "element2": "none",
+        "baseStats": {
+            "health": 420,
+            "speed": 32,
+            "magic": 54,
+            "attack": 42,
+            "defense": 35,
+            "magicAttack": 18,
+            "magicDefense": 20
+        },
+        "defaultAttackText": "Mari swings her hammer at @!",
+        "moves": {
+            "metalBombs": {
+                "displayName": "Metal Bombs",
+                "description": "Mari throws some small metal bombs, dealing small metal damage to three enemies. May miss.",
+                "useText": "Mari throws metal bombs around!",
+                "moveType": "attack",
+                "element": "metal",
+                "magicCost": 6,
+                "target": "opponent-random3",
+                "label": "projectile",
+                "attackRepeatMin": 0,
+                "attackRepeatMax": 0,
+                "accuracy": 80,
+                "effects": {
+                    "damage": 2
+                },
+                "counterEffects": {}
+            },
+            "giantSwing": {
+                "displayName": "Giant Swing",
+                "description": "Mari takes a huge swing with her hammer to deal large physical damage. Cannot be used twice in a row. May miss.",
+                "useText": "Mari takes a giant hammer swing at @!",
+                "moveType": "attack",
+                "element": "physical",
+                "magicCost": 12,
+                "target": "opponent-single",
+                "labels": {
+                    "a": "contact",
+                    "b": "nonconsecutive"
+                }
+                "attackRepeatMin": 0,
+                "attackRepeatMax": 0,
+                "accuracy": 75,
+                "effects": {
+                    "damage": 9
+                },
+                "counterEffects": {}
+            },
+            "magneboost": {
+                "displayName": "Magneboost",
+                "description": "Mari manipulates magnetic fields in the area in order to boost an ally's attack and speed.",
+                "useText": "Mari manipulates magnetic fields and boosts @!",
+                "moveType": "status",
+                "element": "metal",
+                "magicCost": 6,
+                "target": "self-single",
+                "label": "none",
+                "attackRepeatMin": 0,
+                "attackRepeatMax": 0,
+                "accuracy": 100,
+                "effects": {
+                    "attack": 2,
+                    "speed": 2
+                },
+                "counterEffects": {}
+            }
+        }
+    }
+}
