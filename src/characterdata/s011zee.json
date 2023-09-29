@@ -29,7 +29,7 @@
                 "attackRepeatMax": 0,
                 "accuracy": 100,
                 "effects": {
-                    "damage": 4
+                    "damage": 4.5
                     "state": {
                         "id": "stun",
                         "chance": 15

@@ -29,7 +29,7 @@
                 "attackRepeatMax": 0,
                 "accuracy": 80,
                 "effects": {
-                    "damage": 2
+                    "damage": 2.5
                 },
                 "counterEffects": {}
             },
