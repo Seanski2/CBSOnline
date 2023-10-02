@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://dp6la2niiu8yj"]
 
-[ext_resource type="Texture2D" uid="uid://cfa4ucoyat7wy" path="res://Assets/Sprites/CSS/Squidward.png" id="1_f4oaq"]
 [ext_resource type="Theme" uid="uid://cm6ff8iw874fv" path="res://Assets/Themes/text_boxes.tres" id="2_0b06d"]
 [ext_resource type="Texture2D" uid="uid://dams5gwk6pwiq" path="res://Assets/Sprites/BGs/MozartDomain.png" id="2_ygryg"]
+[ext_resource type="Texture2D" uid="uid://ru7d73qp2tc0" path="res://Assets/Sprites/CSS/101Zee.png" id="3_1xp7f"]
 [ext_resource type="AudioStream" uid="uid://nvvkel8rncpa" path="res://Assets/Music/CSS.ogg" id="4_mpvyc"]
 
 [node name="character_selection" type="Control"]
@@ -22,19 +22,29 @@ texture = ExtResource("2_ygryg")
 
 [node name="GridContainer" type="GridContainer" parent="."]
 custom_minimum_size = Vector2(60, 60)
-layout_direction = 2
-layout_mode = 0
-offset_right = 657.0
-offset_bottom = 311.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -413.0
+offset_top = -313.0
+offset_right = 414.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_0b06d")
 theme_override_constants/h_separation = -1
 theme_override_constants/v_separation = -1
-columns = 4
+columns = 14
 
-[node name="squidward" type="TextureButton" parent="GridContainer"]
+[node name="zee" type="TextureButton" parent="GridContainer"]
 layout_mode = 2
-tooltip_text = "squidward"
+tooltip_text = "Placeholder Text Don't Use in Final Version"
+mouse_default_cursor_shape = 2
 theme = ExtResource("2_0b06d")
-texture_normal = ExtResource("1_f4oaq")
+texture_normal = ExtResource("3_1xp7f")
 metadata/CharacterId = "zee"
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
