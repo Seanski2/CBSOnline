@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dp6la2niiu8yj"]
+[gd_scene load_steps=4 format=3 uid="uid://dp6la2niiu8yj"]
 
 [ext_resource type="Texture2D" uid="uid://cfa4ucoyat7wy" path="res://Assets/Sprites/CSS/Squidward.png" id="1_f4oaq"]
+[ext_resource type="Theme" uid="uid://cm6ff8iw874fv" path="res://Assets/Themes/text_boxes.tres" id="2_0b06d"]
 [ext_resource type="Texture2D" uid="uid://dams5gwk6pwiq" path="res://Assets/Sprites/BGs/MozartDomain.png" id="2_ygryg"]
 
 [node name="character_selection" type="Control"]
@@ -31,9 +32,6 @@ columns = 4
 [node name="squidward" type="TextureButton" parent="GridContainer"]
 layout_mode = 2
 tooltip_text = "squidward"
+theme = ExtResource("2_0b06d")
 texture_normal = ExtResource("1_f4oaq")
-
-[node name="squidward2" type="TextureButton" parent="GridContainer"]
-layout_mode = 2
-tooltip_text = "squidward"
-texture_normal = ExtResource("1_f4oaq")
+metadata/CharacterID = &"zee"

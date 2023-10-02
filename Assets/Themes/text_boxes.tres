@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cm6ff8iw874fv"]
+
+[ext_resource type="FontFile" uid="uid://cbpqxwhbf7d32" path="res://Assets/Sprites/Fonts/earthbound-dialogue.ttf" id="1_xyq8b"]
+
+[resource]
+default_font = ExtResource("1_xyq8b")
+default_font_size = 21
+/fonts/Font = ExtResource("1_xyq8b")
