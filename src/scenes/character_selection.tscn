@@ -17,8 +17,8 @@ layout_direction = 2
 layout_mode = 0
 offset_right = 657.0
 offset_bottom = 311.0
-theme_override_constants/h_separation = 60
-theme_override_constants/v_separation = 60
+theme_override_constants/h_separation = 59
+theme_override_constants/v_separation = 59
 columns = 4
 
 [node name="squidward" type="TextureButton" parent="GridContainer"]
