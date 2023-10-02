@@ -1,17 +1,24 @@
-[gd_scene load_steps=13 format=3 uid="uid://dp6la2niiu8yj"]
+[gd_scene load_steps=20 format=3 uid="uid://dp6la2niiu8yj"]
 
 [ext_resource type="Theme" uid="uid://cm6ff8iw874fv" path="res://Assets/Themes/text_boxes.tres" id="2_0b06d"]
 [ext_resource type="Texture2D" uid="uid://dams5gwk6pwiq" path="res://Assets/Sprites/BGs/MozartDomain.png" id="2_ygryg"]
 [ext_resource type="Texture2D" uid="uid://ru7d73qp2tc0" path="res://Assets/Sprites/CSS/101Zee.png" id="3_1xp7f"]
 [ext_resource type="AudioStream" uid="uid://nvvkel8rncpa" path="res://Assets/Sounds/Music/CSS.ogg" id="4_mpvyc"]
+[ext_resource type="Texture2D" uid="uid://cvpa78knp20pn" path="res://Assets/Sprites/CSS/102Mari.png" id="5_8hhcu"]
 [ext_resource type="Script" path="res://src/scripts/select_character.gd" id="5_cdbry"]
-[ext_resource type="Texture2D" uid="uid://bd8y8vd8glkg" path="res://Assets/Sprites/UI/Undo.png" id="5_wl5db"]
+[ext_resource type="Texture2D" uid="uid://dlwyrn0ovwpf6" path="res://Assets/Sprites/UI/Undo.png" id="5_wl5db"]
 [ext_resource type="AudioStream" uid="uid://cix2xgndv261x" path="res://Assets/Sounds/SFX/select.wav" id="6_7ookm"]
-[ext_resource type="Texture2D" uid="uid://b64le16j1bkpq" path="res://Assets/Sprites/UI/UndoDark.png" id="6_votm8"]
-[ext_resource type="Texture2D" uid="uid://bpn505qiwog1l" path="res://Assets/Sprites/UI/Reset.png" id="7_mtc24"]
+[ext_resource type="Texture2D" uid="uid://ccp04lutesfxw" path="res://Assets/Sprites/CSS/104Macy.png" id="6_77c7d"]
+[ext_resource type="Texture2D" uid="uid://cf4sxcrfbu0x8" path="res://Assets/Sprites/UI/UndoDark.png" id="6_votm8"]
+[ext_resource type="Texture2D" uid="uid://ychhmcut6w2r" path="res://Assets/Sprites/CSS/103Ken.png" id="7_c8yqm"]
+[ext_resource type="Texture2D" uid="uid://w03vg6pklkoe" path="res://Assets/Sprites/UI/Reset.png" id="7_mtc24"]
 [ext_resource type="Script" path="res://src/scripts/exclusive/Undo.gd" id="7_npyt1"]
-[ext_resource type="Texture2D" uid="uid://b65ksl73usb5y" path="res://Assets/Sprites/UI/ResetDark.png" id="8_vu7df"]
+[ext_resource type="Texture2D" uid="uid://dldeupum5gl6x" path="res://Assets/Sprites/CSS/801Baggans.png" id="8_p5qli"]
+[ext_resource type="Texture2D" uid="uid://bl4js5wxfs4c0" path="res://Assets/Sprites/UI/ResetDark.png" id="8_vu7df"]
+[ext_resource type="Texture2D" uid="uid://det2jefbrh856" path="res://Assets/Sprites/CSS/804Bob.png" id="9_ydbkd"]
 [ext_resource type="Script" path="res://src/scripts/exclusive/Reset.gd" id="10_4r582"]
+[ext_resource type="Texture2D" uid="uid://iooxs2vah44k" path="res://Assets/Sprites/CSS/803Dez.png" id="10_kqqjl"]
+[ext_resource type="Texture2D" uid="uid://dxio1hg1dpvw8" path="res://Assets/Sprites/CSS/802Mysta.png" id="11_rl3yg"]
 
 [node name="character_selection" type="Control"]
 layout_mode = 3
@@ -56,6 +63,76 @@ theme = ExtResource("2_0b06d")
 texture_normal = ExtResource("3_1xp7f")
 script = ExtResource("5_cdbry")
 metadata/CharacterId = "zee"
+
+[node name="mari" type="TextureButton" parent="Roster"]
+editor_description = "FOR SEAN: to add another character, duplicate this object, drag the texture into the textures section, and modify the Metadata below to the characters name in lowercase (space is replaced by an underscore)"
+layout_mode = 2
+tooltip_text = "Placeholder Text Don't Use in Final Version"
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_0b06d")
+texture_normal = ExtResource("5_8hhcu")
+script = ExtResource("5_cdbry")
+metadata/CharacterId = "mari"
+
+[node name="macy" type="TextureButton" parent="Roster"]
+editor_description = "FOR SEAN: to add another character, duplicate this object, drag the texture into the textures section, and modify the Metadata below to the characters name in lowercase (space is replaced by an underscore)"
+layout_mode = 2
+tooltip_text = "Placeholder Text Don't Use in Final Version"
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_0b06d")
+texture_normal = ExtResource("6_77c7d")
+script = ExtResource("5_cdbry")
+metadata/CharacterId = "macy"
+
+[node name="ken" type="TextureButton" parent="Roster"]
+editor_description = "FOR SEAN: to add another character, duplicate this object, drag the texture into the textures section, and modify the Metadata below to the characters name in lowercase (space is replaced by an underscore)"
+layout_mode = 2
+tooltip_text = "Placeholder Text Don't Use in Final Version"
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_0b06d")
+texture_normal = ExtResource("7_c8yqm")
+script = ExtResource("5_cdbry")
+metadata/CharacterId = "ken"
+
+[node name="baggans" type="TextureButton" parent="Roster"]
+editor_description = "FOR SEAN: to add another character, duplicate this object, drag the texture into the textures section, and modify the Metadata below to the characters name in lowercase (space is replaced by an underscore)"
+layout_mode = 2
+tooltip_text = "Placeholder Text Don't Use in Final Version"
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_0b06d")
+texture_normal = ExtResource("8_p5qli")
+script = ExtResource("5_cdbry")
+metadata/CharacterId = "baggans"
+
+[node name="bob" type="TextureButton" parent="Roster"]
+editor_description = "FOR SEAN: to add another character, duplicate this object, drag the texture into the textures section, and modify the Metadata below to the characters name in lowercase (space is replaced by an underscore)"
+layout_mode = 2
+tooltip_text = "Placeholder Text Don't Use in Final Version"
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_0b06d")
+texture_normal = ExtResource("9_ydbkd")
+script = ExtResource("5_cdbry")
+metadata/CharacterId = "bob"
+
+[node name="dez" type="TextureButton" parent="Roster"]
+editor_description = "FOR SEAN: to add another character, duplicate this object, drag the texture into the textures section, and modify the Metadata below to the characters name in lowercase (space is replaced by an underscore)"
+layout_mode = 2
+tooltip_text = "Placeholder Text Don't Use in Final Version"
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_0b06d")
+texture_normal = ExtResource("10_kqqjl")
+script = ExtResource("5_cdbry")
+metadata/CharacterId = "dez"
+
+[node name="mysta" type="TextureButton" parent="Roster"]
+editor_description = "FOR SEAN: to add another character, duplicate this object, drag the texture into the textures section, and modify the Metadata below to the characters name in lowercase (space is replaced by an underscore)"
+layout_mode = 2
+tooltip_text = "Placeholder Text Don't Use in Final Version"
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_0b06d")
+texture_normal = ExtResource("11_rl3yg")
+script = ExtResource("5_cdbry")
+metadata/CharacterId = "mysta"
 
 [node name="Undo" type="TextureButton" parent="."]
 layout_mode = 0
