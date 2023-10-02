@@ -35,9 +35,9 @@ layout_mode = 2
 tooltip_text = "squidward"
 theme = ExtResource("2_0b06d")
 texture_normal = ExtResource("1_f4oaq")
-metadata/CharacterId = ""
+metadata/CharacterId = "zee"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_mpvyc")
 volume_db = -5.0
 autoplay = true
