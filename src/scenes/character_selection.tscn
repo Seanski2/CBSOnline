@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dp6la2niiu8yj"]
+[gd_scene load_steps=6 format=3 uid="uid://dp6la2niiu8yj"]
 
 [ext_resource type="Theme" uid="uid://cm6ff8iw874fv" path="res://Assets/Themes/text_boxes.tres" id="2_0b06d"]
 [ext_resource type="Texture2D" uid="uid://dams5gwk6pwiq" path="res://Assets/Sprites/BGs/MozartDomain.png" id="2_ygryg"]
 [ext_resource type="Texture2D" uid="uid://ru7d73qp2tc0" path="res://Assets/Sprites/CSS/101Zee.png" id="3_1xp7f"]
 [ext_resource type="AudioStream" uid="uid://nvvkel8rncpa" path="res://Assets/Music/CSS.ogg" id="4_mpvyc"]
+[ext_resource type="Script" path="res://src/scripts/select_character.gd" id="5_cdbry"]
 
 [node name="character_selection" type="Control"]
 layout_mode = 3
@@ -45,6 +46,7 @@ tooltip_text = "Placeholder Text Don't Use in Final Version"
 mouse_default_cursor_shape = 2
 theme = ExtResource("2_0b06d")
 texture_normal = ExtResource("3_1xp7f")
+script = ExtResource("5_cdbry")
 metadata/CharacterId = "zee"
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
