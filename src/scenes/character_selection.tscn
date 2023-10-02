@@ -1,10 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://dp6la2niiu8yj"]
+[gd_scene load_steps=13 format=3 uid="uid://dp6la2niiu8yj"]
 
 [ext_resource type="Theme" uid="uid://cm6ff8iw874fv" path="res://Assets/Themes/text_boxes.tres" id="2_0b06d"]
 [ext_resource type="Texture2D" uid="uid://dams5gwk6pwiq" path="res://Assets/Sprites/BGs/MozartDomain.png" id="2_ygryg"]
 [ext_resource type="Texture2D" uid="uid://ru7d73qp2tc0" path="res://Assets/Sprites/CSS/101Zee.png" id="3_1xp7f"]
-[ext_resource type="AudioStream" uid="uid://nvvkel8rncpa" path="res://Assets/Music/CSS.ogg" id="4_mpvyc"]
+[ext_resource type="AudioStream" uid="uid://nvvkel8rncpa" path="res://Assets/Sounds/Music/CSS.ogg" id="4_mpvyc"]
 [ext_resource type="Script" path="res://src/scripts/select_character.gd" id="5_cdbry"]
+[ext_resource type="Texture2D" uid="uid://bd8y8vd8glkg" path="res://Assets/Sprites/UI/Undo.png" id="5_wl5db"]
+[ext_resource type="AudioStream" uid="uid://cix2xgndv261x" path="res://Assets/Sounds/SFX/select.wav" id="6_7ookm"]
+[ext_resource type="Texture2D" uid="uid://b64le16j1bkpq" path="res://Assets/Sprites/UI/UndoDark.png" id="6_votm8"]
+[ext_resource type="Texture2D" uid="uid://bpn505qiwog1l" path="res://Assets/Sprites/UI/Reset.png" id="7_mtc24"]
+[ext_resource type="Script" path="res://src/scripts/exclusive/Undo.gd" id="7_npyt1"]
+[ext_resource type="Texture2D" uid="uid://b65ksl73usb5y" path="res://Assets/Sprites/UI/ResetDark.png" id="8_vu7df"]
+[ext_resource type="Script" path="res://src/scripts/exclusive/Reset.gd" id="10_4r582"]
 
 [node name="character_selection" type="Control"]
 layout_mode = 3
@@ -21,7 +28,7 @@ offset_right = 1153.0
 offset_bottom = 648.0
 texture = ExtResource("2_ygryg")
 
-[node name="GridContainer" type="GridContainer" parent="."]
+[node name="Roster" type="GridContainer" parent="."]
 custom_minimum_size = Vector2(60, 60)
 layout_mode = 1
 anchors_preset = 7
@@ -40,7 +47,7 @@ theme_override_constants/h_separation = -1
 theme_override_constants/v_separation = -1
 columns = 14
 
-[node name="zee" type="TextureButton" parent="GridContainer"]
+[node name="zee" type="TextureButton" parent="Roster"]
 editor_description = "FOR SEAN: to add another character, duplicate this object, drag the texture into the textures section, and modify the Metadata below to the characters name in lowercase (space is replaced by an underscore)"
 layout_mode = 2
 tooltip_text = "Placeholder Text Don't Use in Final Version"
@@ -50,7 +57,38 @@ texture_normal = ExtResource("3_1xp7f")
 script = ExtResource("5_cdbry")
 metadata/CharacterId = "zee"
 
+[node name="Undo" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 579.0
+offset_right = 67.0
+offset_bottom = 639.0
+tooltip_text = "Undo the last selected character."
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_0b06d")
+disabled = true
+texture_normal = ExtResource("5_wl5db")
+texture_disabled = ExtResource("6_votm8")
+script = ExtResource("7_npyt1")
+
+[node name="Reset" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 579.0
+offset_right = 195.0
+offset_bottom = 639.0
+tooltip_text = "Reset your character selections."
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_0b06d")
+disabled = true
+texture_normal = ExtResource("7_mtc24")
+texture_disabled = ExtResource("8_vu7df")
+script = ExtResource("10_4r582")
+
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_mpvyc")
 volume_db = -5.0
 autoplay = true
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_7ookm")
