@@ -41,6 +41,7 @@ theme_override_constants/v_separation = -1
 columns = 14
 
 [node name="zee" type="TextureButton" parent="GridContainer"]
+editor_description = "FOR SEAN: to add another character, duplicate this object, drag the texture into the textures section, and modify the Metadata below to the characters name in lowercase (space is replaced by an underscore)"
 layout_mode = 2
 tooltip_text = "Placeholder Text Don't Use in Final Version"
 mouse_default_cursor_shape = 2
