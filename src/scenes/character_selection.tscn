@@ -11,37 +11,29 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="GridContainer" type="GridContainer" parent="."]
-custom_minimum_size = Vector2(60, 60)
-layout_direction = 2
-layout_mode = 0
-offset_right = 657.0
-offset_bottom = 311.0
-theme_override_constants/h_separation = 59
-theme_override_constants/v_separation = 59
-columns = 4
-
-[node name="squidward" type="TextureButton" parent="GridContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="GridContainer/squidward"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("1_f4oaq")
-
-[node name="squidward2" type="TextureButton" parent="GridContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="GridContainer/squidward2"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("1_f4oaq")
-
 [node name="BG" type="TextureRect" parent="."]
 z_index = -1
 layout_mode = 0
 offset_right = 1153.0
 offset_bottom = 648.0
 texture = ExtResource("2_ygryg")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+custom_minimum_size = Vector2(60, 60)
+layout_direction = 2
+layout_mode = 0
+offset_right = 657.0
+offset_bottom = 311.0
+theme_override_constants/h_separation = -1
+theme_override_constants/v_separation = -1
+columns = 4
+
+[node name="squidward" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+tooltip_text = "squidward"
+texture_normal = ExtResource("1_f4oaq")
+
+[node name="squidward2" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+tooltip_text = "squidward"
+texture_normal = ExtResource("1_f4oaq")
