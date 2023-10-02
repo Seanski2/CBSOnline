@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dp6la2niiu8yj"]
+[gd_scene load_steps=5 format=3 uid="uid://dp6la2niiu8yj"]
 
 [ext_resource type="Texture2D" uid="uid://cfa4ucoyat7wy" path="res://Assets/Sprites/CSS/Squidward.png" id="1_f4oaq"]
 [ext_resource type="Theme" uid="uid://cm6ff8iw874fv" path="res://Assets/Themes/text_boxes.tres" id="2_0b06d"]
 [ext_resource type="Texture2D" uid="uid://dams5gwk6pwiq" path="res://Assets/Sprites/BGs/MozartDomain.png" id="2_ygryg"]
+[ext_resource type="AudioStream" uid="uid://nvvkel8rncpa" path="res://Assets/Music/CSS.ogg" id="4_mpvyc"]
 
 [node name="character_selection" type="Control"]
 layout_mode = 3
@@ -34,4 +35,9 @@ layout_mode = 2
 tooltip_text = "squidward"
 theme = ExtResource("2_0b06d")
 texture_normal = ExtResource("1_f4oaq")
-metadata/CharacterID = &"zee"
+metadata/CharacterId = ""
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_mpvyc")
+volume_db = -5.0
+autoplay = true
