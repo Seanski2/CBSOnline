@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://dp6la2niiu8yj"]
+
+[ext_resource type="Texture2D" uid="uid://cfa4ucoyat7wy" path="res://Assets/Sprites/CSS/Squidward.png" id="1_f4oaq"]
+[ext_resource type="Texture2D" uid="uid://dams5gwk6pwiq" path="res://Assets/Sprites/BGs/MozartDomain.png" id="2_ygryg"]
+
+[node name="character_selection" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="."]
+custom_minimum_size = Vector2(60, 60)
+layout_direction = 2
+layout_mode = 0
+offset_right = 657.0
+offset_bottom = 311.0
+theme_override_constants/h_separation = 60
+theme_override_constants/v_separation = 60
+columns = 4
+
+[node name="squidward" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/squidward"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_f4oaq")
+
+[node name="squidward2" type="TextureButton" parent="GridContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/squidward2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_f4oaq")
+
+[node name="BG" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 648.0
+texture = ExtResource("2_ygryg")
