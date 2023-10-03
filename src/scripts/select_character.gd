@@ -26,6 +26,8 @@ func _pressed():
 		
 		CSSMenuVars.myTeam[CSSMenuVars.teamSelected] = charData;
 		CSSMenuVars.teamSelected += 1;
+		if CSSMenuVars.teamSelected == 4:
+			$"../../Ready".disabled = false;
 		$"../../Undo".disabled = false;
 		$"../../Reset".disabled = false;
 		$"../../SFX".playing = true;

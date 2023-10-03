@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dp6la2niiu8yj"]
+[gd_scene load_steps=30 format=3 uid="uid://dp6la2niiu8yj"]
 
 [ext_resource type="Theme" uid="uid://cm6ff8iw874fv" path="res://Assets/Themes/text_boxes.tres" id="2_0b06d"]
 [ext_resource type="Texture2D" uid="uid://dams5gwk6pwiq" path="res://Assets/Sprites/BGs/MozartDomain.png" id="2_ygryg"]
@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://brn4oh0gurfh3" path="res://Assets/Sprites/UI/Char2.png" id="21_cmsxm"]
 [ext_resource type="Texture2D" uid="uid://bjku1j53ng7ol" path="res://Assets/Sprites/UI/Char4.png" id="22_iu1qn"]
 [ext_resource type="AudioStream" uid="uid://den7r56lraru4" path="res://Assets/Sounds/SFX/reset.wav" id="23_nclgm"]
+[ext_resource type="Script" path="res://src/scripts/change_scene.gd" id="26_pukd3"]
 [ext_resource type="PackedScene" uid="uid://bwd3q2kbbat05" path="res://src/scenes/options.tscn" id="26_st53h"]
 
 [node name="character_selection" type="Control"]
@@ -372,6 +373,37 @@ script = ExtResource("10_4r582")
 
 [node name="SFX" type="AudioStreamPlayer" parent="Reset"]
 stream = ExtResource("23_nclgm")
+
+[node name="Ready" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -156.0
+offset_top = -65.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("2_0b06d")
+disabled = true
+text = "Ready!"
+script = ExtResource("26_pukd3")
+metadata/loadScene = "res://src/scenes/title.tscn"
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 156.0
+offset_bottom = 65.0
+theme = ExtResource("2_0b06d")
+text = "Back
+"
+script = ExtResource("26_pukd3")
+metadata/loadScene = "res://src/scenes/title.tscn"
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_mpvyc")
