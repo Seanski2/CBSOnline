@@ -1,0 +1,101 @@
+[gd_scene load_steps=6 format=3 uid="uid://d18phjj724x4d"]
+
+[ext_resource type="Texture2D" uid="uid://dams5gwk6pwiq" path="res://Assets/Sprites/BGs/MozartDomain.png" id="1_ng0ec"]
+[ext_resource type="Theme" uid="uid://cm6ff8iw874fv" path="res://Assets/Themes/text_boxes.tres" id="2_efike"]
+[ext_resource type="Script" path="res://src/scripts/change_scene.gd" id="5_4lyhd"]
+[ext_resource type="AudioStream" uid="uid://cix2xgndv261x" path="res://Assets/Sounds/SFX/select.wav" id="27_p2xuy"]
+[ext_resource type="PackedScene" uid="uid://bwd3q2kbbat05" path="res://src/scenes/options.tscn" id="28_8k6yw"]
+
+[node name="character_selection" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 648.0
+texture = ExtResource("1_ng0ec")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+volume_db = -5.0
+autoplay = true
+
+[node name="SFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("27_p2xuy")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.5
+offset_top = -117.0
+offset_right = 42.5
+offset_bottom = -91.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_efike")
+theme_override_font_sizes/font_size = 50
+text = "CBS Online"
+horizontal_alignment = 1
+
+[node name="OptionsInfo" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -104.0
+offset_top = -30.0
+offset_right = 105.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_efike")
+text = "Press \"O\" for Options."
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="VersionInfo" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -30.0
+offset_right = 214.0
+grow_vertical = 0
+theme = ExtResource("2_efike")
+text = "v1.0.0"
+vertical_alignment = 2
+
+[node name="Start" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -98.0
+offset_top = 39.0
+offset_right = 98.0
+offset_bottom = 86.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_efike")
+theme_override_font_sizes/font_size = 30
+text = "Start"
+script = ExtResource("5_4lyhd")
+metadata/loadScene = "res://src/scenes/character_selection.tscn"
+
+[node name="Options Menu" parent="." instance=ExtResource("28_8k6yw")]
+layout_mode = 1
