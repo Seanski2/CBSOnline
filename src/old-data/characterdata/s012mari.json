@@ -44,7 +44,7 @@
 				"labels": {
 					"a": "contact",
 					"b": "nonconsecutive"
-				}
+				},
 				"attackRepeatMin": 0,
 				"attackRepeatMax": 0,
 				"accuracy": 75,

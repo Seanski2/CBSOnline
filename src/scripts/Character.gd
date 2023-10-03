@@ -1,7 +1,8 @@
 
 class_name Character
 
-var jsonPath = "res://src/old-data/characterdata/"
+#var jsonPath = "res://src/old-data/characterdata/"
+var jsonPath = "res://src/data/characters/"
 var jsonData = {}
 var internalName = ""
 

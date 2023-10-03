@@ -1,0 +1,116 @@
+{
+	"displayName": "Dummy",
+	"description": "A placeholder character. Should only be used in testing.",
+	"sprite": "S05-4Boomaker.png",
+	"element1": "none",
+	"element2": "none",
+	"baseStats": {
+		"health": 500,
+		"speed": 30,
+		"magic": 70,
+		"attack": 30,
+		"defense": 30,
+		"magicAttack": 30,
+		"magicDefense": 30
+	},
+	"defaultAttackText": "Placeholder Text",
+	"moves": {
+		"placeholderAttack": {
+			"displayName": "Placeholder",
+			"description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
+			"useText": "Placeholder",
+			"moveType": "attack",
+			"element": "physical",
+			"magicCost": 0,
+			"target": "opponent-single",
+			"label": "Placeholder",
+			"attackRepeatMin": 0,
+			"attackRepeatMax": 0,
+			"accuracy": 90,
+			"effects": {
+				"damage": 5
+			},
+			"counterEffects": {}
+		},
+		"placeholderMagicAttack": {
+			"displayName": "Placeholder",
+			"description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
+			"useText": "Placeholder",
+			"moveType": "magic-attack",
+			"element": "physical",
+			"magicCost": 5,
+			"target": "opponent-single",
+			"label": "Placeholder",
+			"attackRepeatMin": 0,
+			"attackRepeatMax": 1,
+			"accuracy": 75,
+			"effects": {
+				"damage": 5
+			},
+			"counterEffects": {}
+		},
+		"placeholderBuff": {
+			"displayName": "Placeholder",
+			"description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
+			"useText": "Placeholder",
+			"moveType": "status",
+			"element": "none",
+			"magicCost": 5,
+			"target": "self-single",
+			"label": "Placeholder",
+			"attackRepeatMin": 0,
+			"attackRepeatMax": 0,
+			"accuracy": 100,
+			"effects": {
+				"attack": 5,
+				"defense": 5,
+				"health": 5
+			},
+			"counterEffects": {}
+		},
+		"placeholderDebuff": {
+			"displayName": "Placeholder",
+			"description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
+			"useText": "Placeholder",
+			"moveType": "status",
+			"element": "physical",
+			"magicCost": 10,
+			"target": "opponent-random3",
+			"label": "Placeholder",
+			"attackRepeatMin": 0,
+			"attackRepeatMax": 0,
+			"accuracy": 50,
+			"effects": {
+				"speed": 5,
+				"defense": 5,
+				"magicDefense": 5,
+				"state": {
+					"id": "example",
+					"chance": 25
+				},
+			},
+			"counterEffects": {}
+		},
+		"placeholderStrongMove": {
+			"displayName": "Placeholder",
+			"description": "A Placeholder Move. Contact Minemaker if you see this because you shouldn't be unless something broke.",
+			"useText": "Placeholder",
+			"moveType": "magic-attack",
+			"element": "physical",
+			"magicCost": 10,
+			"target": "opponent-all",
+			"label": "Placeholder",
+			"attackRepeatMin": 0,
+			"attackRepeatMax": 0,
+			"accuracy": 33,
+			"effects": {
+				"damage": 20
+			},
+			"counterEffects": {
+				"speed": 10,
+				"damage": 10,
+				"defense": 5
+			}
+		}
+	}
+}

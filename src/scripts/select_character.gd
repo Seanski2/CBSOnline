@@ -1,6 +1,5 @@
 extends TextureButton
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _pressed():
 	if (CSSMenuVars.teamSelected <= 3) and not (CSSMenuVars.myTeam.has(get_meta("CharacterId"))):
 		
@@ -11,12 +10,21 @@ func _pressed():
 			$"../../Selection Indications/Selection 3", 
 			$"../../Selection Indications/Selection 4"
 		];
+		var characterDisplays = [
+			$"../../Character Displays/Char 1",
+			$"../../Character Displays/Char 2", 
+			$"../../Character Displays/Char 3", 
+			$"../../Character Displays/Char 4"
+		];
 		
 		selectionObjects[CSSMenuVars.teamSelected].set_position(self.get_screen_position());
 		selectionObjects[CSSMenuVars.teamSelected].visible = true;
-
 		
-		CSSMenuVars.myTeam[CSSMenuVars.teamSelected] = get_meta("CharacterId");
+		var charData = Character.new(get_meta("CharacterId") + ".json");
+		
+		#characterDisplays[CSSMenuVars.teamSelected].set_texture(load("res://Assets/Sprites/Characters/" + charData["sprite"]));
+		
+		CSSMenuVars.myTeam[CSSMenuVars.teamSelected] = charData;
 		CSSMenuVars.teamSelected += 1;
 		$"../../Undo".disabled = false;
 		$"../../Reset".disabled = false;

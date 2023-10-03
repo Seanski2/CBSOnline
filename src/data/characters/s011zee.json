@@ -1,0 +1,7 @@
+{
+	"displayName": "Dummy",
+	"description": "A placeholder character. Should only be used in testing.",
+	"sprite": "S01-1Zee.png",
+	"element1": "none",
+	"element2": "none"
+}
