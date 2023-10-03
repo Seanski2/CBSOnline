@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dams5gwk6pwiq"
-path="res://.godot/imported/MozartDomain.png-c543c04fc2d0dfe23e7713b83dd91bce.ctex"
+uid="uid://cx4bmnj5wkn8b"
+path="res://.godot/imported/Planets.png-9f1143ef9fb9cb0b4480bed0ed90e0b5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/BGs/MozartDomain.png"
-dest_files=["res://.godot/imported/MozartDomain.png-c543c04fc2d0dfe23e7713b83dd91bce.ctex"]
+source_file="res://Assets/Sprites/BGs/Mozart's Domain/Planets.png"
+dest_files=["res://.godot/imported/Planets.png-9f1143ef9fb9cb0b4480bed0ed90e0b5.ctex"]
 
 [params]
 

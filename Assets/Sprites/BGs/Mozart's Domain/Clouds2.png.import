@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6ljmjofgut84"
-path="res://.godot/imported/CheeseRome.png-a5fb2e57ffd227f8c71aa3ccb6542184.ctex"
+uid="uid://uu4kox3i3we6"
+path="res://.godot/imported/Clouds2.png-67be590376880c03b682ad7a1844a0a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/BGs/Old/CheeseRome.png"
-dest_files=["res://.godot/imported/CheeseRome.png-a5fb2e57ffd227f8c71aa3ccb6542184.ctex"]
+source_file="res://Assets/Sprites/BGs/Mozart's Domain/Clouds2.png"
+dest_files=["res://.godot/imported/Clouds2.png-67be590376880c03b682ad7a1844a0a6.ctex"]
 
 [params]
 

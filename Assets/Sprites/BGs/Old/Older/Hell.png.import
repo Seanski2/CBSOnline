@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dams5gwk6pwiq"
-path="res://.godot/imported/MozartDomain.png-c543c04fc2d0dfe23e7713b83dd91bce.ctex"
+uid="uid://bugf64dyolpqf"
+path="res://.godot/imported/Hell.png-086661f257727cdca53d1ff33a7e4307.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/BGs/MozartDomain.png"
-dest_files=["res://.godot/imported/MozartDomain.png-c543c04fc2d0dfe23e7713b83dd91bce.ctex"]
+source_file="res://Assets/Sprites/BGs/Old/Older/Hell.png"
+dest_files=["res://.godot/imported/Hell.png-086661f257727cdca53d1ff33a7e4307.ctex"]
 
 [params]
 

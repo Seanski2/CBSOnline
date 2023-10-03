@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dams5gwk6pwiq"
-path="res://.godot/imported/MozartDomain.png-c543c04fc2d0dfe23e7713b83dd91bce.ctex"
+uid="uid://clg47vxddas1x"
+path="res://.godot/imported/PinaplRoom.png-59087f54329574e616a06c450859434e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/BGs/MozartDomain.png"
-dest_files=["res://.godot/imported/MozartDomain.png-c543c04fc2d0dfe23e7713b83dd91bce.ctex"]
+source_file="res://Assets/Sprites/BGs/Old/Older/PinaplRoom.png"
+dest_files=["res://.godot/imported/PinaplRoom.png-59087f54329574e616a06c450859434e.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dams5gwk6pwiq"
-path="res://.godot/imported/MozartDomain.png-c543c04fc2d0dfe23e7713b83dd91bce.ctex"
+uid="uid://dwc8i1hvnrkvd"
+path="res://.godot/imported/Clouds1.png-2e92a21af3e92faacc5894702f6bd7c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/BGs/MozartDomain.png"
-dest_files=["res://.godot/imported/MozartDomain.png-c543c04fc2d0dfe23e7713b83dd91bce.ctex"]
+source_file="res://Assets/Sprites/BGs/Mozart's Domain/Clouds1.png"
+dest_files=["res://.godot/imported/Clouds1.png-2e92a21af3e92faacc5894702f6bd7c2.ctex"]
 
 [params]
 
