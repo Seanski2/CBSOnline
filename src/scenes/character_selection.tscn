@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dp6la2niiu8yj"]
+[gd_scene load_steps=24 format=3 uid="uid://dp6la2niiu8yj"]
 
 [ext_resource type="Theme" uid="uid://cm6ff8iw874fv" path="res://Assets/Themes/text_boxes.tres" id="2_0b06d"]
 [ext_resource type="Texture2D" uid="uid://dams5gwk6pwiq" path="res://Assets/Sprites/BGs/MozartDomain.png" id="2_ygryg"]
@@ -19,6 +19,10 @@
 [ext_resource type="Script" path="res://src/scripts/exclusive/Reset.gd" id="10_4r582"]
 [ext_resource type="Texture2D" uid="uid://iooxs2vah44k" path="res://Assets/Sprites/CSS/803Dez.png" id="10_kqqjl"]
 [ext_resource type="Texture2D" uid="uid://dxio1hg1dpvw8" path="res://Assets/Sprites/CSS/802Mysta.png" id="11_rl3yg"]
+[ext_resource type="Texture2D" uid="uid://c7hwncs5hcb8f" path="res://Assets/Sprites/UI/Char3.png" id="14_52eoc"]
+[ext_resource type="Texture2D" uid="uid://cyk055d5f6xt8" path="res://Assets/Sprites/UI/Char1.png" id="20_b8flf"]
+[ext_resource type="Texture2D" uid="uid://brn4oh0gurfh3" path="res://Assets/Sprites/UI/Char2.png" id="21_cmsxm"]
+[ext_resource type="Texture2D" uid="uid://bjku1j53ng7ol" path="res://Assets/Sprites/UI/Char4.png" id="22_iu1qn"]
 
 [node name="character_selection" type="Control"]
 layout_mode = 3
@@ -133,6 +137,39 @@ theme = ExtResource("2_0b06d")
 texture_normal = ExtResource("11_rl3yg")
 script = ExtResource("5_cdbry")
 metadata/CharacterId = "mysta"
+
+[node name="Selection Indications" type="Control" parent="."]
+layout_mode = 2
+anchors_preset = 0
+offset_bottom = 60.0
+
+[node name="Selection 1" type="TextureRect" parent="Selection Indications"]
+z_index = 1
+layout_mode = 0
+offset_right = 60.0
+offset_bottom = 60.0
+texture = ExtResource("20_b8flf")
+
+[node name="Selection 2" type="TextureRect" parent="Selection Indications"]
+z_index = 1
+layout_mode = 0
+offset_right = 60.0
+offset_bottom = 60.0
+texture = ExtResource("21_cmsxm")
+
+[node name="Selection 3" type="TextureRect" parent="Selection Indications"]
+z_index = 1
+layout_mode = 0
+offset_right = 60.0
+offset_bottom = 60.0
+texture = ExtResource("14_52eoc")
+
+[node name="Selection 4" type="TextureRect" parent="Selection Indications"]
+z_index = 1
+layout_mode = 0
+offset_right = 60.0
+offset_bottom = 60.0
+texture = ExtResource("22_iu1qn")
 
 [node name="Undo" type="TextureButton" parent="."]
 layout_mode = 0
