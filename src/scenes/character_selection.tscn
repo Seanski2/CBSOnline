@@ -144,6 +144,7 @@ anchors_preset = 0
 offset_bottom = 60.0
 
 [node name="Selection 1" type="TextureRect" parent="Selection Indications"]
+visible = false
 z_index = 1
 layout_mode = 0
 offset_right = 60.0
@@ -151,6 +152,7 @@ offset_bottom = 60.0
 texture = ExtResource("20_b8flf")
 
 [node name="Selection 2" type="TextureRect" parent="Selection Indications"]
+visible = false
 z_index = 1
 layout_mode = 0
 offset_right = 60.0
@@ -158,6 +160,7 @@ offset_bottom = 60.0
 texture = ExtResource("21_cmsxm")
 
 [node name="Selection 3" type="TextureRect" parent="Selection Indications"]
+visible = false
 z_index = 1
 layout_mode = 0
 offset_right = 60.0
@@ -165,6 +168,7 @@ offset_bottom = 60.0
 texture = ExtResource("14_52eoc")
 
 [node name="Selection 4" type="TextureRect" parent="Selection Indications"]
+visible = false
 z_index = 1
 layout_mode = 0
 offset_right = 60.0
