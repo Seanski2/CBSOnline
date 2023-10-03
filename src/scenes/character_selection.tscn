@@ -40,6 +40,8 @@ layout_mode = 0
 offset_right = 1153.0
 offset_bottom = 648.0
 texture = ExtResource("2_ygryg")
+expand_mode = 2
+stretch_mode = 4
 
 [node name="Roster" type="GridContainer" parent="."]
 custom_minimum_size = Vector2(60, 60)
@@ -210,6 +212,7 @@ script = ExtResource("10_4r582")
 
 [node name="SFX" type="AudioStreamPlayer" parent="Reset"]
 stream = ExtResource("23_nclgm")
+volume_db = -6.0
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_mpvyc")
