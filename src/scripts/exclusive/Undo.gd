@@ -16,6 +16,6 @@ func _pressed():
 	if (CSSMenuVars.teamSelected < 1):
 		disabled = true;
 		$"../Reset".disabled = true;
-	$"../SFX".playing = true;
+	$"SFX".playing = true;
 	print(CSSMenuVars.teamSelected)
 	print(CSSMenuVars.myTeam)

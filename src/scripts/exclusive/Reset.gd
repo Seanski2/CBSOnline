@@ -9,6 +9,6 @@ func _pressed():
 	$"../Selection Indications/Selection 4".visible = false;
 	$"../Undo".disabled = true;
 	disabled = true
-	$"../SFX".playing = true;
+	$"SFX".playing = true;
 	print(CSSMenuVars.teamSelected)
 	print(CSSMenuVars.myTeam)

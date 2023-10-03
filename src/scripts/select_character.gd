@@ -4,6 +4,7 @@ extends TextureButton
 func _pressed():
 	if (CSSMenuVars.teamSelected <= 3) and not (CSSMenuVars.myTeam.has(get_meta("CharacterId"))):
 		
+		var sfx = load("res://Assets/Sounds/SFX/select.wav")
 		var selectionObjects = [
 			$"../../Selection Indications/Selection 1",
 			$"../../Selection Indications/Selection 2", 
