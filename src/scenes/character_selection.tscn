@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://dp6la2niiu8yj"]
+[gd_scene load_steps=31 format=3 uid="uid://dp6la2niiu8yj"]
 
 [ext_resource type="Theme" uid="uid://cm6ff8iw874fv" path="res://Assets/Themes/text_boxes.tres" id="2_0b06d"]
 [ext_resource type="Texture2D" uid="uid://dams5gwk6pwiq" path="res://Assets/Sprites/BGs/MozartDomain.png" id="2_ygryg"]
@@ -29,6 +29,7 @@
 [ext_resource type="AudioStream" uid="uid://den7r56lraru4" path="res://Assets/Sounds/SFX/reset.wav" id="23_nclgm"]
 [ext_resource type="Script" path="res://src/scripts/change_scene.gd" id="26_pukd3"]
 [ext_resource type="PackedScene" uid="uid://bwd3q2kbbat05" path="res://src/scenes/options.tscn" id="26_st53h"]
+[ext_resource type="Script" path="res://src/scripts/exclusive/Back.gd" id="27_dsp3n"]
 
 [node name="character_selection" type="Control"]
 layout_mode = 3
@@ -402,7 +403,7 @@ offset_bottom = 65.0
 theme = ExtResource("2_0b06d")
 text = "Back
 "
-script = ExtResource("26_pukd3")
+script = ExtResource("27_dsp3n")
 metadata/loadScene = "res://src/scenes/title.tscn"
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
