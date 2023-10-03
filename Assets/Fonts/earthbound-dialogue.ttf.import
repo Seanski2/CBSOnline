@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cbpqxwhbf7d32"
-path="res://.godot/imported/earthbound-dialogue.ttf-160f7e5432153f6dcea7c8002fa60776.fontdata"
+path="res://.godot/imported/earthbound-dialogue.ttf-aa6d221ed48c1d1fd34314bfd212a432.fontdata"
 
 [deps]
 
-source_file="res://Assets/Sprites/Fonts/earthbound-dialogue.ttf"
-dest_files=["res://.godot/imported/earthbound-dialogue.ttf-160f7e5432153f6dcea7c8002fa60776.fontdata"]
+source_file="res://Assets/Fonts/earthbound-dialogue.ttf"
+dest_files=["res://.godot/imported/earthbound-dialogue.ttf-aa6d221ed48c1d1fd34314bfd212a432.fontdata"]
 
 [params]
 

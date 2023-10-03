@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dp6la2niiu8yj"]
+[gd_scene load_steps=26 format=3 uid="uid://dp6la2niiu8yj"]
 
 [ext_resource type="Theme" uid="uid://cm6ff8iw874fv" path="res://Assets/Themes/text_boxes.tres" id="2_0b06d"]
 [ext_resource type="Texture2D" uid="uid://dams5gwk6pwiq" path="res://Assets/Sprites/BGs/MozartDomain.png" id="2_ygryg"]
@@ -20,9 +20,11 @@
 [ext_resource type="Texture2D" uid="uid://iooxs2vah44k" path="res://Assets/Sprites/CSS/803Dez.png" id="10_kqqjl"]
 [ext_resource type="Texture2D" uid="uid://dxio1hg1dpvw8" path="res://Assets/Sprites/CSS/802Mysta.png" id="11_rl3yg"]
 [ext_resource type="Texture2D" uid="uid://c7hwncs5hcb8f" path="res://Assets/Sprites/UI/Char3.png" id="14_52eoc"]
+[ext_resource type="AudioStream" uid="uid://d2payiyso5rh" path="res://Assets/Sounds/SFX/undo.wav" id="19_y2ipj"]
 [ext_resource type="Texture2D" uid="uid://cyk055d5f6xt8" path="res://Assets/Sprites/UI/Char1.png" id="20_b8flf"]
 [ext_resource type="Texture2D" uid="uid://brn4oh0gurfh3" path="res://Assets/Sprites/UI/Char2.png" id="21_cmsxm"]
 [ext_resource type="Texture2D" uid="uid://bjku1j53ng7ol" path="res://Assets/Sprites/UI/Char4.png" id="22_iu1qn"]
+[ext_resource type="AudioStream" uid="uid://den7r56lraru4" path="res://Assets/Sounds/SFX/reset.wav" id="23_nclgm"]
 
 [node name="character_selection" type="Control"]
 layout_mode = 3
@@ -189,6 +191,9 @@ texture_normal = ExtResource("5_wl5db")
 texture_disabled = ExtResource("6_votm8")
 script = ExtResource("7_npyt1")
 
+[node name="SFX" type="AudioStreamPlayer" parent="Undo"]
+stream = ExtResource("19_y2ipj")
+
 [node name="Reset" type="TextureButton" parent="."]
 layout_mode = 0
 offset_left = 75.0
@@ -202,6 +207,9 @@ disabled = true
 texture_normal = ExtResource("7_mtc24")
 texture_disabled = ExtResource("8_vu7df")
 script = ExtResource("10_4r582")
+
+[node name="SFX" type="AudioStreamPlayer" parent="Reset"]
+stream = ExtResource("23_nclgm")
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_mpvyc")

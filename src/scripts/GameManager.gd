@@ -1,7 +1,5 @@
 extends Node
 
-
-
 var p1chars = [Character.new("s011zee.json"), Character.new("s011zee.json"), Character.new("s011zee.json"), Character.new("s011zee.json")];
 var p2chars = [Character.new("s011zee.json"), Character.new("s011zee.json"), Character.new("s011zee.json"), Character.new("s011zee.json")];
 
