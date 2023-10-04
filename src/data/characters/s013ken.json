@@ -1,0 +1,19 @@
+{
+	"displayName": "Ken",
+	"description": "Placeholder.",
+	"sprite": "S01-3Ken.png",
+	"element1": "fire",
+	"element2": "none",
+	"baseStats": {
+		"health": 580,
+		"speed": 12,
+		"magic": 50,
+		"attack": 45,
+		"defense": 39,
+		"magicAttack": 29,
+		"magicDefense": 25
+	},
+	"defaultAttackText": "Ken punches @!",
+	"moves": {},
+	"exclusiveData": {}
+}

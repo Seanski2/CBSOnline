@@ -1,0 +1,19 @@
+{
+	"displayName": "Mysta",
+	"description": "Placeholder.",
+	"sprite": "S08-2Mysta.png",
+	"element1": "none",
+	"element2": "none",
+	"baseStats": {
+		"health": 0,
+		"speed": 0,
+		"magic": 0,
+		"attack": 0,
+		"defense": 0,
+		"magicAttack": 0,
+		"magicDefense": 0
+	},
+	"defaultAttackText": "Placeholder",
+	"moves": {},
+	"exclusiveData": {}
+}

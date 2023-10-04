@@ -22,7 +22,7 @@ func _pressed():
 		
 		var charData = Character.new(get_meta("CharacterId") + ".json");
 		
-		#characterDisplays[CSSMenuVars.teamSelected].set_texture(load("res://Assets/Sprites/Characters/" + charData["sprite"]));
+		characterDisplays[CSSMenuVars.teamSelected].set_texture(load("res://Assets/Sprites/Characters/" + charData.jsonData.sprite));
 		
 		CSSMenuVars.myTeam[CSSMenuVars.teamSelected] = charData;
 		CSSMenuVars.teamSelected += 1;

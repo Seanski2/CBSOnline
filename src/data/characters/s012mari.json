@@ -1,0 +1,19 @@
+{
+	"displayName": "Mari",
+	"description": "Placeholder.",
+	"sprite": "S01-2Mari.png",
+	"element1": "metal",
+	"element2": "none",
+	"baseStats": {
+		"health": 420,
+		"speed": 32,
+		"magic": 54,
+		"attack": 42,
+		"defense": 35,
+		"magicAttack": 18,
+		"magicDefense": 20
+	},
+	"defaultAttackText": "Mari swings her hammer at @!",
+	"moves": {},
+	"exclusiveData": {}
+}

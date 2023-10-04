@@ -56,42 +56,49 @@ offset_bottom = 650.0
 [node name="Texture" type="TextureRect" parent="Control"]
 texture_repeat = 2
 layout_direction = 2
+layout_mode = 0
 offset_right = 1153.0
 offset_bottom = 655.0
 texture = ExtResource("1_lxf3r")
 stretch_mode = 4
 
 [node name="Texture2" type="TextureRect" parent="Control"]
+layout_mode = 0
 offset_right = 4358.0
 offset_bottom = 645.0
 texture = ExtResource("7_rf43l")
 stretch_mode = 4
 
 [node name="Texture3" type="TextureRect" parent="Control"]
+layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("6_36uv1")
 stretch_mode = 4
 
 [node name="Texture4" type="TextureRect" parent="Control"]
+layout_mode = 0
 offset_right = 1156.0
 offset_bottom = 650.0
 texture = ExtResource("5_dlumg")
 stretch_mode = 4
 
 [node name="Texture5" type="TextureRect" parent="Control"]
+layout_mode = 0
 offset_right = 1156.0
 offset_bottom = 650.0
 texture = ExtResource("4_8empm")
 stretch_mode = 4
 
 [node name="Texture6" type="TextureRect" parent="Control"]
+layout_mode = 0
 offset_right = 1156.0
 offset_bottom = 650.0
 texture = ExtResource("3_vr446")
 stretch_mode = 4
 
 [node name="Texture7" type="TextureRect" parent="Control"]
+layout_mode = 0
 offset_right = 1154.0
 offset_bottom = 650.0
 texture = ExtResource("2_kuu84")

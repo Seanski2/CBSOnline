@@ -1,7 +1,44 @@
 {
-	"displayName": "Dummy",
-	"description": "A placeholder character. Should only be used in testing.",
+	"displayName": "Zee",
+	"description": "Placeholder.",
 	"sprite": "S01-1Zee.png",
-	"element1": "none",
-	"element2": "none"
+	"element1": "metal",
+	"element2": "electric",
+	"baseStats": {
+			"health": 490,
+			"speed": 33,
+			"magic": 75,
+			"attack": 35,
+			"defense": 24,
+			"magicAttack": 35,
+			"magicDefense": 24
+	},
+	"defaultAttackText": "Zee roundhouse kicks @!",
+	"moves": {},
+	"exclusiveData": {
+		"offenseForm": {
+			"sprite": "S01-1ZeeOffense.png",
+			"baseStats": {
+				"health": 490,
+				"speed": 33,
+				"magic": 75,
+				"attack": 35,
+				"defense": 24,
+				"magicAttack": 35,
+				"magicDefense": 24
+			}
+		},
+		"defenseForm": {
+			"sprite": "S01-1ZeeDefense.png",
+			"baseStats": {
+				"health": 490,
+				"speed": 33,
+				"magic": 75,
+				"attack": 24,
+				"defense": 35,
+				"magicAttack": 24,
+				"magicDefense": 35
+			}
+		}
+	}
 }
