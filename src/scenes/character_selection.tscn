@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://dp6la2niiu8yj"]
+[gd_scene load_steps=53 format=3 uid="uid://dp6la2niiu8yj"]
 
 [ext_resource type="Texture2D" uid="uid://dyyoiwymvafuq" path="res://Assets/Sprites/BGs/Mozart's Domain/BG.png" id="1_lxf3r"]
 [ext_resource type="Theme" uid="uid://cm6ff8iw874fv" path="res://Assets/Themes/text_boxes.tres" id="2_0b06d"]
@@ -26,12 +26,13 @@
 [ext_resource type="Texture2D" uid="uid://iooxs2vah44k" path="res://Assets/Sprites/CSS/803Dez.png" id="10_kqqjl"]
 [ext_resource type="Texture2D" uid="uid://dxio1hg1dpvw8" path="res://Assets/Sprites/CSS/802Mysta.png" id="11_rl3yg"]
 [ext_resource type="Texture2D" uid="uid://c7hwncs5hcb8f" path="res://Assets/Sprites/UI/Char3.png" id="14_52eoc"]
-[ext_resource type="Texture2D" uid="uid://ccqoug8pvl88t" path="res://Assets/Sprites/Characters/Squidward.png" id="16_opkrg"]
 [ext_resource type="Texture2D" uid="uid://vke3o7ig1sdm" path="res://Assets/Sprites/Symbols/Elements/Astral.png" id="17_7kivx"]
 [ext_resource type="AudioStream" uid="uid://d2payiyso5rh" path="res://Assets/Sounds/SFX/undo.wav" id="19_y2ipj"]
 [ext_resource type="Texture2D" uid="uid://cyk055d5f6xt8" path="res://Assets/Sprites/UI/Char1.png" id="20_b8flf"]
 [ext_resource type="Texture2D" uid="uid://brn4oh0gurfh3" path="res://Assets/Sprites/UI/Char2.png" id="21_cmsxm"]
+[ext_resource type="Texture2D" uid="uid://cuq7onpn2fitn" path="res://Assets/Sprites/Characters/Empty.png" id="22_36ta6"]
 [ext_resource type="Texture2D" uid="uid://bjku1j53ng7ol" path="res://Assets/Sprites/UI/Char4.png" id="22_iu1qn"]
+[ext_resource type="Texture2D" uid="uid://q6lnh444kdyu" path="res://Assets/Sprites/UI/Summoning.png" id="23_1bf3l"]
 [ext_resource type="AudioStream" uid="uid://den7r56lraru4" path="res://Assets/Sounds/SFX/reset.wav" id="23_nclgm"]
 [ext_resource type="Texture2D" uid="uid://c2k6g7ng673hj" path="res://Assets/Sprites/UI/Ready.png" id="26_ad83e"]
 [ext_resource type="PackedScene" uid="uid://bwd3q2kbbat05" path="res://src/scenes/options.tscn" id="26_st53h"]
@@ -39,6 +40,91 @@
 [ext_resource type="Script" path="res://src/scripts/exclusive/Back.gd" id="27_dsp3n"]
 [ext_resource type="Script" path="res://src/scripts/exclusive/Ready.gd" id="28_xk143"]
 [ext_resource type="Texture2D" uid="uid://dpiuiamy7ktiw" path="res://Assets/Sprites/UI/Back.png" id="29_vyagt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hohny"]
+atlas = ExtResource("23_1bf3l")
+region = Rect2(0, 0, 214, 225)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tso4r"]
+atlas = ExtResource("23_1bf3l")
+region = Rect2(214, 0, 214, 225)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_scp74"]
+atlas = ExtResource("23_1bf3l")
+region = Rect2(428, 0, 214, 225)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3q8rj"]
+atlas = ExtResource("23_1bf3l")
+region = Rect2(642, 0, 214, 225)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pqbgg"]
+atlas = ExtResource("23_1bf3l")
+region = Rect2(856, 0, 214, 225)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ishgy"]
+atlas = ExtResource("23_1bf3l")
+region = Rect2(1070, 0, 214, 225)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1p2r"]
+atlas = ExtResource("23_1bf3l")
+region = Rect2(1284, 0, 214, 225)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wd4a4"]
+atlas = ExtResource("23_1bf3l")
+region = Rect2(1498, 0, 214, 225)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yodge"]
+atlas = ExtResource("23_1bf3l")
+region = Rect2(1712, 0, 214, 225)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wsuik"]
+atlas = ExtResource("23_1bf3l")
+region = Rect2(1926, 0, 214, 225)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tb7ou"]
+atlas = ExtResource("23_1bf3l")
+region = Rect2(2140, 0, 214, 225)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tcw85"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hohny")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tso4r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_scp74")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3q8rj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pqbgg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ishgy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b1p2r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wd4a4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yodge")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wsuik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tb7ou")
+}],
+"loop": true,
+"name": &"default",
+"speed": 25.0
+}]
 
 [node name="character_selection" type="Control"]
 layout_mode = 3
@@ -48,12 +134,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Control" type="Control" parent="."]
+[node name="BG" type="Control" parent="."]
+texture_repeat = 2
 anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 650.0
 
-[node name="Texture" type="TextureRect" parent="Control"]
+[node name="Texture" type="TextureRect" parent="BG"]
 texture_repeat = 2
 layout_direction = 2
 layout_mode = 0
@@ -62,42 +149,42 @@ offset_bottom = 655.0
 texture = ExtResource("1_lxf3r")
 stretch_mode = 4
 
-[node name="Texture2" type="TextureRect" parent="Control"]
+[node name="Texture2" type="TextureRect" parent="BG"]
 layout_mode = 0
 offset_right = 4358.0
 offset_bottom = 645.0
 texture = ExtResource("7_rf43l")
 stretch_mode = 4
 
-[node name="Texture3" type="TextureRect" parent="Control"]
+[node name="Texture3" type="TextureRect" parent="BG"]
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("6_36uv1")
 stretch_mode = 4
 
-[node name="Texture4" type="TextureRect" parent="Control"]
+[node name="Texture4" type="TextureRect" parent="BG"]
 layout_mode = 0
 offset_right = 1156.0
 offset_bottom = 650.0
 texture = ExtResource("5_dlumg")
 stretch_mode = 4
 
-[node name="Texture5" type="TextureRect" parent="Control"]
+[node name="Texture5" type="TextureRect" parent="BG"]
 layout_mode = 0
 offset_right = 1156.0
 offset_bottom = 650.0
 texture = ExtResource("4_8empm")
 stretch_mode = 4
 
-[node name="Texture6" type="TextureRect" parent="Control"]
+[node name="Texture6" type="TextureRect" parent="BG"]
 layout_mode = 0
 offset_right = 1156.0
 offset_bottom = 650.0
 texture = ExtResource("3_vr446")
 stretch_mode = 4
 
-[node name="Texture7" type="TextureRect" parent="Control"]
+[node name="Texture7" type="TextureRect" parent="BG"]
 layout_mode = 0
 offset_right = 1154.0
 offset_bottom = 650.0
@@ -247,20 +334,27 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -434.0
+offset_left = -493.0
 offset_top = -209.0
-offset_right = 434.0
+offset_right = 493.0
 offset_bottom = 73.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_0b06d")
-theme_override_constants/separation = -50
+theme_override_constants/separation = -10
 alignment = 1
 
 [node name="Char 1" type="TextureRect" parent="Character Displays"]
 layout_mode = 2
-texture = ExtResource("16_opkrg")
+texture = ExtResource("22_36ta6")
 stretch_mode = 2
+
+[node name="Circle" type="AnimatedSprite2D" parent="Character Displays/Char 1"]
+show_behind_parent = true
+sprite_frames = SubResource("SpriteFrames_tcw85")
+autoplay = "default"
+centered = false
+offset = Vector2(0, 85)
 
 [node name="Element 1" type="TextureRect" parent="Character Displays/Char 1"]
 visible = false
@@ -270,11 +364,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -65.0
-offset_top = -64.0
-offset_right = -1.0
+offset_left = -32.0
+offset_top = -61.0
+offset_right = 32.0
+offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("17_7kivx")
 
 [node name="Element 2" type="TextureRect" parent="Character Displays/Char 1"]
@@ -285,17 +381,42 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 6.0
-offset_top = -64.0
-offset_right = 70.0
+offset_left = 4.0
+offset_top = -61.0
+offset_right = 68.0
+offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("17_7kivx")
+
+[node name="Name" type="Label" parent="Character Displays/Char 1"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -91.5
+offset_top = -43.0
+offset_right = 91.5
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 31
+text = "???"
+horizontal_alignment = 1
 
 [node name="Char 2" type="TextureRect" parent="Character Displays"]
 layout_mode = 2
-texture = ExtResource("16_opkrg")
+texture = ExtResource("22_36ta6")
 stretch_mode = 2
+
+[node name="Circle" type="AnimatedSprite2D" parent="Character Displays/Char 2"]
+show_behind_parent = true
+sprite_frames = SubResource("SpriteFrames_tcw85")
+autoplay = "default"
+frame_progress = 0.554141
+centered = false
+offset = Vector2(0, 85)
 
 [node name="Element 1" type="TextureRect" parent="Character Displays/Char 2"]
 visible = false
@@ -305,11 +426,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -65.0
-offset_top = -64.0
-offset_right = -1.0
+offset_left = -32.0
+offset_top = -61.0
+offset_right = 32.0
+offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("17_7kivx")
 
 [node name="Element 2" type="TextureRect" parent="Character Displays/Char 2"]
@@ -320,17 +443,42 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 6.0
-offset_top = -64.0
-offset_right = 70.0
+offset_left = 4.0
+offset_top = -61.0
+offset_right = 68.0
+offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("17_7kivx")
+
+[node name="Name" type="Label" parent="Character Displays/Char 2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -91.5
+offset_top = -43.0
+offset_right = 91.5
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 31
+text = "???"
+horizontal_alignment = 1
 
 [node name="Char 3" type="TextureRect" parent="Character Displays"]
 layout_mode = 2
-texture = ExtResource("16_opkrg")
+texture = ExtResource("22_36ta6")
 stretch_mode = 2
+
+[node name="Circle" type="AnimatedSprite2D" parent="Character Displays/Char 3"]
+show_behind_parent = true
+sprite_frames = SubResource("SpriteFrames_tcw85")
+autoplay = "default"
+frame_progress = 0.554141
+centered = false
+offset = Vector2(0, 85)
 
 [node name="Element 1" type="TextureRect" parent="Character Displays/Char 3"]
 visible = false
@@ -340,11 +488,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -65.0
-offset_top = -64.0
-offset_right = -1.0
+offset_left = -32.0
+offset_top = -61.0
+offset_right = 32.0
+offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("17_7kivx")
 
 [node name="Element 2" type="TextureRect" parent="Character Displays/Char 3"]
@@ -355,17 +505,41 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 6.0
-offset_top = -64.0
-offset_right = 70.0
+offset_left = 4.0
+offset_top = -61.0
+offset_right = 68.0
+offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("17_7kivx")
+
+[node name="Name" type="Label" parent="Character Displays/Char 3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -91.5
+offset_top = -43.0
+offset_right = 91.5
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 31
+text = "???"
+horizontal_alignment = 1
 
 [node name="Char 4" type="TextureRect" parent="Character Displays"]
 layout_mode = 2
-texture = ExtResource("16_opkrg")
+texture = ExtResource("22_36ta6")
 stretch_mode = 2
+
+[node name="Circle" type="AnimatedSprite2D" parent="Character Displays/Char 4"]
+show_behind_parent = true
+sprite_frames = SubResource("SpriteFrames_tcw85")
+autoplay = "default"
+centered = false
+offset = Vector2(0, 85)
 
 [node name="Element 1" type="TextureRect" parent="Character Displays/Char 4"]
 visible = false
@@ -375,11 +549,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -65.0
-offset_top = -64.0
-offset_right = -1.0
+offset_left = -32.0
+offset_top = -61.0
+offset_right = 32.0
+offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("17_7kivx")
 
 [node name="Element 2" type="TextureRect" parent="Character Displays/Char 4"]
@@ -390,12 +566,29 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 6.0
-offset_top = -64.0
-offset_right = 70.0
+offset_left = 4.0
+offset_top = -61.0
+offset_right = 68.0
+offset_bottom = 3.0
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("17_7kivx")
+
+[node name="Name" type="Label" parent="Character Displays/Char 4"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -91.5
+offset_top = -43.0
+offset_right = 91.5
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 31
+text = "???"
+horizontal_alignment = 1
 
 [node name="Undo" type="TextureButton" parent="."]
 layout_mode = 0
@@ -474,5 +667,4 @@ autoplay = true
 stream = ExtResource("6_7ookm")
 
 [node name="Options Menu" parent="." instance=ExtResource("26_st53h")]
-visible = false
 layout_mode = 1
