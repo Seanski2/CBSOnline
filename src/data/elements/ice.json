@@ -1,0 +1,12 @@
+{
+	"name": "Ice",
+	"effects": {
+		"fire": 0.5,
+		"ice": 0.5,
+		"nature": 2,
+		"earth": 2,
+		"magic": 0.5,
+		"metal": 0.5,
+		"undead": 2
+	}
+}

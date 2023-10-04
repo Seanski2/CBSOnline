@@ -1,0 +1,10 @@
+{
+	"name": "Astral",
+	"effects": {
+		"wind": 2,
+		"sound": 2,
+		"aura": 0.5,
+		"light": 2,
+		"metal": 0.5
+	}
+}

@@ -1,0 +1,11 @@
+{
+	"name": "Electric",
+	"effects": {
+		"electric": 0.5,
+		"water": 2,
+		"earth": 0,
+		"wind": 2,
+		"magic": 0.5,
+		"metal": 0.5
+	}
+}

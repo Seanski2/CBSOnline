@@ -1,0 +1,10 @@
+{
+	"name": "Sound",
+	"effects": {
+		"water": 2,
+		"earth": 2,
+		"wind": 2,
+		"astral": 0.5,
+		"undead": 0.5
+	}
+}

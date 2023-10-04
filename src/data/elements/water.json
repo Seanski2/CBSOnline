@@ -1,0 +1,13 @@
+{
+	"name": "Water",
+	"effects": {
+		"fire": 2,
+		"water": 0.5,
+		"nature": 0.5,
+		"earth": 2,
+		"toxic": 2,
+		"sound": 0.5,
+		"paint": 2,
+		"metal": 2
+	}
+}

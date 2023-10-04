@@ -1,0 +1,10 @@
+{
+	"name": "Undead",
+	"effects": {
+		"nature": 0.5,
+		"toxic": 0.5,
+		"magic": 2,
+		"aura": 2,
+		"darkness": 0.5
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"name": "Earth",
+	"effects": {
+		"fire": 2,
+		"electric": 2,
+		"nature": 0.5,
+		"earth": 0.5,
+		"toxic": 2,
+		"wind": 0,
+		"sound": 0.5,
+		"paint": 2,
+		"metal": 2
+	}
+}

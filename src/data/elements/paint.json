@@ -1,0 +1,11 @@
+{
+	"name": "Paint",
+	"effects": {
+		"water": 2,
+		"earth": 0.5,
+		"magic": 2,
+		"aura": 2,
+		"paint": 0.5,
+		"metal": 0.5
+	}
+}

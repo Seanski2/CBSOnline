@@ -1,0 +1,10 @@
+{
+	"name": "Light",
+	"effects": {
+		"nature": 0,
+		"magic": 2,
+		"aura": 0,
+		"light": 0.5,
+		"darkness": 2
+	}
+}

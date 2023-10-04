@@ -1,0 +1,11 @@
+{
+	"name": "Nature",
+	"effects": {
+		"fire": 0.5,
+		"earth": 2,
+		"toxic": 2,
+		"astral": 2,
+		"paint": 2,
+		"metal": 0.5
+	}
+}

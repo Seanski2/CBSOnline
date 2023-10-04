@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 CSSMenuVars="*res://src/scripts/css_menu.gd"
-CBSData="*res://src/data/data.gd"
 
 [display]
 

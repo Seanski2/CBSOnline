@@ -1,0 +1,11 @@
+{
+	"name": "Darkness",
+	"effects": {
+		"fire": 0.5,
+		"nature": 2,
+		"magic": 2,
+		"aura": 0,
+		"light": 2,
+		"darkness": 0.5
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"name": "Wind",
+	"effects": {
+		"fire": 0.5,
+		"sound": 0.5,
+		"magic": 2,
+		"astral": 0,
+		"metal": 2
+	}
+}

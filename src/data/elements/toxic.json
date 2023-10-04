@@ -1,0 +1,12 @@
+{
+	"name": "Toxic",
+	"effects": {
+		"water": 2,
+		"nature": 2,
+		"earth": 0,
+		"toxic": 0.5,
+		"darkness": 0.5,
+		"metal": 0,
+		"undead": 0.5
+	}
+}
