@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dams5gwk6pwiq"
-path="res://.godot/imported/MozartDomain.png-c543c04fc2d0dfe23e7713b83dd91bce.ctex"
+path="res://.godot/imported/MozartDomain.png-d76af6e512c740d74c37c45caa77545a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/BGs/MozartDomain.png"
-dest_files=["res://.godot/imported/MozartDomain.png-c543c04fc2d0dfe23e7713b83dd91bce.ctex"]
+source_file="res://Assets/Sprites/BGs/Old/MozartDomain.png"
+dest_files=["res://.godot/imported/MozartDomain.png-d76af6e512c740d74c37c45caa77545a.ctex"]
 
 [params]
 

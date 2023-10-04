@@ -1,18 +1,24 @@
-[gd_scene load_steps=31 format=3 uid="uid://dp6la2niiu8yj"]
+[gd_scene load_steps=40 format=3 uid="uid://dp6la2niiu8yj"]
 
+[ext_resource type="Texture2D" uid="uid://dyyoiwymvafuq" path="res://Assets/Sprites/BGs/Mozart's Domain/BG.png" id="1_lxf3r"]
 [ext_resource type="Theme" uid="uid://cm6ff8iw874fv" path="res://Assets/Themes/text_boxes.tres" id="2_0b06d"]
-[ext_resource type="Texture2D" uid="uid://dams5gwk6pwiq" path="res://Assets/Sprites/BGs/MozartDomain.png" id="2_ygryg"]
+[ext_resource type="Texture2D" uid="uid://dwc8i1hvnrkvd" path="res://Assets/Sprites/BGs/Mozart's Domain/Clouds1.png" id="2_kuu84"]
 [ext_resource type="Texture2D" uid="uid://ru7d73qp2tc0" path="res://Assets/Sprites/CSS/101Zee.png" id="3_1xp7f"]
+[ext_resource type="Texture2D" uid="uid://uu4kox3i3we6" path="res://Assets/Sprites/BGs/Mozart's Domain/Clouds2.png" id="3_vr446"]
+[ext_resource type="Texture2D" uid="uid://c1072enjjyssq" path="res://Assets/Sprites/BGs/Mozart's Domain/Clouds3.png" id="4_8empm"]
 [ext_resource type="AudioStream" uid="uid://nvvkel8rncpa" path="res://Assets/Sounds/Music/CSS.ogg" id="4_mpvyc"]
 [ext_resource type="Texture2D" uid="uid://cvpa78knp20pn" path="res://Assets/Sprites/CSS/102Mari.png" id="5_8hhcu"]
 [ext_resource type="Script" path="res://src/scripts/select_character.gd" id="5_cdbry"]
+[ext_resource type="Texture2D" uid="uid://digwpttht6kwj" path="res://Assets/Sprites/BGs/Mozart's Domain/Clouds4.png" id="5_dlumg"]
 [ext_resource type="Texture2D" uid="uid://bd8y8vd8glkg" path="res://Assets/Sprites/UI/Undo.png" id="5_wl5db"]
 [ext_resource type="AudioStream" uid="uid://cix2xgndv261x" path="res://Assets/Sounds/SFX/select.wav" id="6_7ookm"]
+[ext_resource type="Texture2D" uid="uid://h2fv41dojd5b" path="res://Assets/Sprites/BGs/Mozart's Domain/Clouds5.png" id="6_36uv1"]
 [ext_resource type="Texture2D" uid="uid://ccp04lutesfxw" path="res://Assets/Sprites/CSS/104Macy.png" id="6_77c7d"]
 [ext_resource type="Texture2D" uid="uid://b64le16j1bkpq" path="res://Assets/Sprites/UI/UndoDark.png" id="6_votm8"]
 [ext_resource type="Texture2D" uid="uid://ychhmcut6w2r" path="res://Assets/Sprites/CSS/103Ken.png" id="7_c8yqm"]
 [ext_resource type="Texture2D" uid="uid://bpn505qiwog1l" path="res://Assets/Sprites/UI/Reset.png" id="7_mtc24"]
 [ext_resource type="Script" path="res://src/scripts/exclusive/Undo.gd" id="7_npyt1"]
+[ext_resource type="Texture2D" uid="uid://cx4bmnj5wkn8b" path="res://Assets/Sprites/BGs/Mozart's Domain/Planets.png" id="7_rf43l"]
 [ext_resource type="Texture2D" uid="uid://dldeupum5gl6x" path="res://Assets/Sprites/CSS/801Baggans.png" id="8_p5qli"]
 [ext_resource type="Texture2D" uid="uid://b65ksl73usb5y" path="res://Assets/Sprites/UI/ResetDark.png" id="8_vu7df"]
 [ext_resource type="Texture2D" uid="uid://det2jefbrh856" path="res://Assets/Sprites/CSS/804Bob.png" id="9_ydbkd"]
@@ -27,9 +33,12 @@
 [ext_resource type="Texture2D" uid="uid://brn4oh0gurfh3" path="res://Assets/Sprites/UI/Char2.png" id="21_cmsxm"]
 [ext_resource type="Texture2D" uid="uid://bjku1j53ng7ol" path="res://Assets/Sprites/UI/Char4.png" id="22_iu1qn"]
 [ext_resource type="AudioStream" uid="uid://den7r56lraru4" path="res://Assets/Sounds/SFX/reset.wav" id="23_nclgm"]
-[ext_resource type="Script" path="res://src/scripts/change_scene.gd" id="26_pukd3"]
+[ext_resource type="Texture2D" uid="uid://c2k6g7ng673hj" path="res://Assets/Sprites/UI/Ready.png" id="26_ad83e"]
 [ext_resource type="PackedScene" uid="uid://bwd3q2kbbat05" path="res://src/scenes/options.tscn" id="26_st53h"]
+[ext_resource type="Texture2D" uid="uid://u3rxvsbvmq0" path="res://Assets/Sprites/UI/ReadyDark.png" id="27_d8yy3"]
 [ext_resource type="Script" path="res://src/scripts/exclusive/Back.gd" id="27_dsp3n"]
+[ext_resource type="Script" path="res://src/scripts/exclusive/Ready.gd" id="28_xk143"]
+[ext_resource type="Texture2D" uid="uid://dpiuiamy7ktiw" path="res://Assets/Sprites/UI/Back.png" id="29_vyagt"]
 
 [node name="character_selection" type="Control"]
 layout_mode = 3
@@ -39,13 +48,53 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="BG" type="TextureRect" parent="."]
-z_index = -1
-layout_mode = 0
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 650.0
+
+[node name="Texture" type="TextureRect" parent="Control"]
+texture_repeat = 2
+layout_direction = 2
 offset_right = 1153.0
+offset_bottom = 655.0
+texture = ExtResource("1_lxf3r")
+stretch_mode = 4
+
+[node name="Texture2" type="TextureRect" parent="Control"]
+offset_right = 4358.0
+offset_bottom = 645.0
+texture = ExtResource("7_rf43l")
+stretch_mode = 4
+
+[node name="Texture3" type="TextureRect" parent="Control"]
+offset_right = 1152.0
 offset_bottom = 648.0
-texture = ExtResource("2_ygryg")
-expand_mode = 2
+texture = ExtResource("6_36uv1")
+stretch_mode = 4
+
+[node name="Texture4" type="TextureRect" parent="Control"]
+offset_right = 1156.0
+offset_bottom = 650.0
+texture = ExtResource("5_dlumg")
+stretch_mode = 4
+
+[node name="Texture5" type="TextureRect" parent="Control"]
+offset_right = 1156.0
+offset_bottom = 650.0
+texture = ExtResource("4_8empm")
+stretch_mode = 4
+
+[node name="Texture6" type="TextureRect" parent="Control"]
+offset_right = 1156.0
+offset_bottom = 650.0
+texture = ExtResource("3_vr446")
+stretch_mode = 4
+
+[node name="Texture7" type="TextureRect" parent="Control"]
+offset_right = 1154.0
+offset_bottom = 650.0
+texture = ExtResource("2_kuu84")
 stretch_mode = 4
 
 [node name="Roster" type="GridContainer" parent="."]
@@ -375,34 +424,37 @@ script = ExtResource("10_4r582")
 [node name="SFX" type="AudioStreamPlayer" parent="Reset"]
 stream = ExtResource("23_nclgm")
 
-[node name="Ready" type="Button" parent="."]
+[node name="Ready" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -156.0
-offset_top = -65.0
+offset_left = -130.0
+offset_top = -70.0
 offset_right = -10.0
 offset_bottom = -10.0
 grow_horizontal = 0
 grow_vertical = 0
+tooltip_text = "Is your team how you want it? Then click this button!"
+mouse_default_cursor_shape = 2
 theme = ExtResource("2_0b06d")
 disabled = true
-text = "Ready!"
-script = ExtResource("26_pukd3")
+texture_normal = ExtResource("26_ad83e")
+texture_disabled = ExtResource("27_d8yy3")
+script = ExtResource("28_xk143")
 metadata/loadScene = "res://src/scenes/title.tscn"
 
-[node name="Back" type="Button" parent="."]
+[node name="Back" type="TextureButton" parent="."]
 layout_mode = 1
 offset_left = 10.0
 offset_top = 10.0
-offset_right = 156.0
-offset_bottom = 65.0
+offset_right = 70.0
+offset_bottom = 70.0
+mouse_default_cursor_shape = 2
 theme = ExtResource("2_0b06d")
-text = "Back
-"
+texture_normal = ExtResource("29_vyagt")
 script = ExtResource("27_dsp3n")
 metadata/loadScene = "res://src/scenes/title.tscn"
 
@@ -415,4 +467,5 @@ autoplay = true
 stream = ExtResource("6_7ookm")
 
 [node name="Options Menu" parent="." instance=ExtResource("26_st53h")]
+visible = false
 layout_mode = 1
