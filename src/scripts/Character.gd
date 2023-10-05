@@ -13,10 +13,10 @@ var element2
 
 var maxHealth
 var speed
-var magic
-var attack
+var mp
+var melee
 var defense
-var magAttack
+var magic
 var magDefense
 
 var health
@@ -31,10 +31,10 @@ func _init(charName: String):
 	name = jsonData["name"]
 	maxHealth = jsonData[name]["baseStats"]["health"]
 	speed = jsonData[name]["baseStats"]["speed"]
-	magic = jsonData[name]["baseStats"]["magic"]
-	attack = jsonData[name]["baseStats"]["attack"]
+	mp = jsonData[name]["baseStats"]["magic"]
+	melee = jsonData[name]["baseStats"]["attack"]
 	defense = jsonData[name]["baseStats"]["defense"]
-	magAttack = jsonData[name]["baseStats"]["magicAttack"]
+	magic = jsonData[name]["baseStats"]["magicAttack"]
 	magDefense = jsonData[name]["baseStats"]["magicDefense"]
 	
 	health = maxHealth
@@ -53,14 +53,14 @@ func load_json(filePath: String):
 	else:
 		print("Character file not found for " + internalName)
 
-func basicAttack(char: Character, isPhys: bool = true, basePower: int = 4):
+func basicAttack(char: Character, isMelee: bool = true, basePower: int = 4):
 	var attackStat
 	var defenseStat
-	if isPhys:
-		attackStat = attack
+	if isMelee:
+		attackStat = melee
 		defenseStat = char.defense
 	else:
-		attackStat = magAttack
+		attackStat = magic
 		defenseStat = char.magDefense
 	var damage = (9 * basePower * attackStat)/defenseStat
 	char.health -= damage
