@@ -2,8 +2,8 @@
 	"displayName": "Mysta",
 	"description": "Placeholder.",
 	"sprite": "S08-2Mysta.png",
-	"element1": "none",
-	"element2": "none",
+	"element1": "astral",
+	"element2": "magic",
 	"baseStats": {
 		"health": 0,
 		"speed": 0,

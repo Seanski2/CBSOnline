@@ -2,7 +2,7 @@
 	"displayName": "Macy",
 	"description": "Placeholder.",
 	"sprite": "S01-4Macy.png",
-	"element1": "none",
+	"element1": "magic",
 	"element2": "none",
 	"baseStats": {
 		"health": 0,
