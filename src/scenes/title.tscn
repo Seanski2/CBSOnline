@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://d18phjj724x4d"]
+[gd_scene load_steps=7 format=3 uid="uid://d18phjj724x4d"]
 
 [ext_resource type="Texture2D" uid="uid://dams5gwk6pwiq" path="res://Assets/Sprites/BGs/Old/MozartDomain.png" id="1_ng0ec"]
 [ext_resource type="Theme" uid="uid://cm6ff8iw874fv" path="res://Assets/Themes/text_boxes.tres" id="2_efike"]
+[ext_resource type="Texture2D" uid="uid://nd7n73fpmhih" path="res://Assets/Sprites/UI/Logo.png" id="3_smqcy"]
 [ext_resource type="Script" path="res://src/scripts/exclusive/Start.gd" id="4_8x7r3"]
 [ext_resource type="AudioStream" uid="uid://cix2xgndv261x" path="res://Assets/Sounds/SFX/select.wav" id="27_p2xuy"]
 [ext_resource type="PackedScene" uid="uid://bwd3q2kbbat05" path="res://src/scenes/options.tscn" id="28_8k6yw"]
@@ -30,23 +31,20 @@ autoplay = true
 [node name="SFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("27_p2xuy")
 
-[node name="Title" type="Label" parent="."]
+[node name="Title" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -42.5
-offset_top = -117.0
-offset_right = 42.5
-offset_bottom = -91.0
+offset_left = -170.5
+offset_top = -178.0
+offset_right = 170.5
+offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("2_efike")
-theme_override_font_sizes/font_size = 50
-text = "CBS Online"
-horizontal_alignment = 1
+texture = ExtResource("3_smqcy")
 
 [node name="OptionsInfo" type="Label" parent="."]
 layout_mode = 1
@@ -99,4 +97,5 @@ script = ExtResource("4_8x7r3")
 metadata/loadScene = "res://src/scenes/character_selection.tscn"
 
 [node name="Options Menu" parent="." instance=ExtResource("28_8k6yw")]
+visible = false
 layout_mode = 1
