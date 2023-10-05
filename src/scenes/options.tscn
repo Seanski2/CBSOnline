@@ -1,9 +1,30 @@
-[gd_scene load_steps=5 format=3 uid="uid://bwd3q2kbbat05"]
+[gd_scene load_steps=6 format=3 uid="uid://bwd3q2kbbat05"]
 
 [ext_resource type="Theme" uid="uid://cm6ff8iw874fv" path="res://Assets/Themes/text_boxes.tres" id="1_7dyaa"]
 [ext_resource type="Script" path="res://src/scripts/exclusive/options.gd" id="1_k0yof"]
 [ext_resource type="Script" path="res://src/scripts/exclusive/volume_control.gd" id="3_4gy3k"]
 [ext_resource type="Script" path="res://src/scripts/exclusive/fps_display.gd" id="3_33i70"]
+
+[sub_resource type="GDScript" id="GDScript_t3rjb"]
+resource_name = "detail_control"
+script/source = "extends HSlider
+
+func _ready():
+	value = GameSettings.detail
+
+func _process(delta):
+	if value == 4:
+		$\"../Text\".text = \"[right]Full[/right]\"
+	if value == 3:
+		$\"../Text\".text = \"[right]Medium[/right]\"
+	if value == 2:
+		$\"../Text\".text = \"[right]Low[/right]\"
+	if value == 1:
+		$\"../Text\".text = \"[right]Potato[/right]\"
+
+func _value_changed(new_value):
+	GameSettings.detail = new_value
+"
 
 [node name="Options Menu" type="Control"]
 layout_mode = 3
@@ -23,50 +44,46 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -122.0
-offset_top = -74.0
-offset_right = 122.0
-offset_bottom = 74.0
+offset_left = -132.0
+offset_top = -142.0
+offset_right = 132.0
+offset_bottom = 142.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Container" type="VBoxContainer" parent="Options Menu"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -106.0
+offset_right = 106.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_7dyaa")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Options Menu"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -115.0
-offset_top = 5.0
-offset_right = 118.0
-offset_bottom = 55.0
-grow_horizontal = 2
+[node name="RichTextLabel" type="RichTextLabel" parent="Options Menu/Container"]
+clip_contents = false
+layout_mode = 2
+size_flags_vertical = 3
 bbcode_enabled = true
 text = "[font_size=35][center]Options[/center][/font_size]"
 scroll_active = false
 
-[node name="Show FPS" type="CheckBox" parent="Options Menu"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -109.0
-offset_top = 48.0
-offset_right = 107.0
-offset_bottom = 83.0
-grow_horizontal = 2
+[node name="Show FPS" type="CheckBox" parent="Options Menu/Container"]
+layout_mode = 2
+size_flags_vertical = 6
 text = "Show FPS"
 script = ExtResource("3_33i70")
 
-[node name="Volume" type="RichTextLabel" parent="Options Menu"]
-layout_mode = 0
-offset_left = 18.0
-offset_top = 80.0
-offset_right = 226.0
-offset_bottom = 120.0
+[node name="Volume" type="RichTextLabel" parent="Options Menu/Container"]
+clip_contents = false
+layout_mode = 2
+size_flags_vertical = 3
 text = "Volume"
 
-[node name="HSlider" type="HSlider" parent="Options Menu/Volume"]
+[node name="HSlider" type="HSlider" parent="Options Menu/Container/Volume"]
 z_index = 1
 layout_mode = 1
 anchors_preset = 5
@@ -80,6 +97,45 @@ grow_horizontal = 2
 mouse_default_cursor_shape = 6
 value = 100.0
 script = ExtResource("3_4gy3k")
+
+[node name="Detail" type="RichTextLabel" parent="Options Menu/Container"]
+clip_contents = false
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "Detail"
+
+[node name="Text" type="RichTextLabel" parent="Options Menu/Container/Detail"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -106.0
+offset_right = 106.0
+offset_bottom = 54.0
+grow_horizontal = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "[right]???[/right]"
+
+[node name="HSlider" type="HSlider" parent="Options Menu/Container/Detail"]
+z_index = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -104.0
+offset_top = 24.0
+offset_right = 104.0
+offset_bottom = 40.0
+grow_horizontal = 2
+mouse_default_cursor_shape = 6
+min_value = 1.0
+max_value = 4.0
+value = 4.0
+tick_count = 4
+script = SubResource("GDScript_t3rjb")
 
 [node name="FPS Display" type="Label" parent="."]
 visible = false

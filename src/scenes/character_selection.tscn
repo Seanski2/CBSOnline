@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://dp6la2niiu8yj"]
+[gd_scene load_steps=54 format=3 uid="uid://dp6la2niiu8yj"]
 
 [ext_resource type="Texture2D" uid="uid://dyyoiwymvafuq" path="res://Assets/Sprites/BGs/Mozart's Domain/BG.png" id="1_lxf3r"]
 [ext_resource type="Theme" uid="uid://cm6ff8iw874fv" path="res://Assets/Themes/text_boxes.tres" id="2_0b06d"]
@@ -40,6 +40,36 @@
 [ext_resource type="Script" path="res://src/scripts/exclusive/Back.gd" id="27_dsp3n"]
 [ext_resource type="Script" path="res://src/scripts/exclusive/Ready.gd" id="28_xk143"]
 [ext_resource type="Texture2D" uid="uid://dpiuiamy7ktiw" path="res://Assets/Sprites/UI/Back.png" id="29_vyagt"]
+
+[sub_resource type="GDScript" id="GDScript_5e4yw"]
+resource_name = "Parallax"
+script/source = "extends Control
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	if not GameSettings.detail <= 2:
+		var parallaxScroll = -0.1
+		var multiplier = 2
+		$\"1\".position.x += parallaxScroll
+		$\"2\".position.x += parallaxScroll * (multiplier)
+		$\"3\".position.x += parallaxScroll * (multiplier * 1.1)
+		$\"4\".position.x += parallaxScroll * (multiplier * 1.2)
+		$\"5\".position.x += parallaxScroll * (multiplier * 1.3)
+		$\"6\".position.x += parallaxScroll * (multiplier * 1.4)
+	
+		if $\"1\".position.x <= -($\"1\".size.x):
+			$\"1\".position.x += $\"1\".size.x
+		if $\"2\".position.x <= -($\"2\".size.x):
+			$\"2\".position.x += $\"2\".size.x
+		if $\"3\".position.x <= -($\"3\".size.x):
+			$\"3\".position.x += $\"3\".size.x
+		if $\"4\".position.x <= -($\"4\".size.x):
+			$\"4\".position.x += $\"4\".size.x
+		if $\"5\".position.x <= -($\"5\".size.x):
+			$\"5\".position.x += $\"5\".size.x
+		if $\"6\".position.x <= -($\"6\".size.x):
+			$\"6\".position.x += $\"6\".size.x
+"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hohny"]
 atlas = ExtResource("23_1bf3l")
@@ -139,54 +169,105 @@ texture_repeat = 2
 anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 650.0
+script = SubResource("GDScript_5e4yw")
 
-[node name="Texture" type="TextureRect" parent="BG"]
+[node name="Back" type="TextureRect" parent="BG"]
 texture_repeat = 2
 layout_direction = 2
 layout_mode = 0
-offset_right = 1153.0
+offset_right = 1154.0
 offset_bottom = 655.0
 texture = ExtResource("1_lxf3r")
 stretch_mode = 4
 
-[node name="Texture2" type="TextureRect" parent="BG"]
+[node name="1" type="TextureRect" parent="BG"]
+texture_repeat = 2
 layout_mode = 0
 offset_right = 4358.0
 offset_bottom = 645.0
 texture = ExtResource("7_rf43l")
 stretch_mode = 4
 
-[node name="Texture3" type="TextureRect" parent="BG"]
+[node name="Repeat" type="TextureRect" parent="BG/1"]
+texture_repeat = 2
+layout_mode = 0
+offset_left = 4358.0
+offset_right = 8716.0
+offset_bottom = 645.0
+texture = ExtResource("7_rf43l")
+stretch_mode = 4
+
+[node name="2" type="TextureRect" parent="BG"]
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("6_36uv1")
 stretch_mode = 4
 
-[node name="Texture4" type="TextureRect" parent="BG"]
+[node name="Repeat" type="TextureRect" parent="BG/2"]
+layout_mode = 0
+offset_left = 1152.0
+offset_right = 2304.0
+offset_bottom = 648.0
+texture = ExtResource("6_36uv1")
+stretch_mode = 4
+
+[node name="3" type="TextureRect" parent="BG"]
 layout_mode = 0
 offset_right = 1156.0
 offset_bottom = 650.0
 texture = ExtResource("5_dlumg")
 stretch_mode = 4
 
-[node name="Texture5" type="TextureRect" parent="BG"]
+[node name="Repeat" type="TextureRect" parent="BG/3"]
+layout_mode = 0
+offset_left = 1155.0
+offset_right = 2311.0
+offset_bottom = 650.0
+texture = ExtResource("5_dlumg")
+stretch_mode = 4
+
+[node name="4" type="TextureRect" parent="BG"]
 layout_mode = 0
 offset_right = 1156.0
 offset_bottom = 650.0
 texture = ExtResource("4_8empm")
 stretch_mode = 4
 
-[node name="Texture6" type="TextureRect" parent="BG"]
+[node name="Repeat" type="TextureRect" parent="BG/4"]
+layout_mode = 0
+offset_left = 1155.0
+offset_right = 2311.0
+offset_bottom = 650.0
+texture = ExtResource("4_8empm")
+stretch_mode = 4
+
+[node name="5" type="TextureRect" parent="BG"]
 layout_mode = 0
 offset_right = 1156.0
 offset_bottom = 650.0
 texture = ExtResource("3_vr446")
 stretch_mode = 4
 
-[node name="Texture7" type="TextureRect" parent="BG"]
+[node name="Repeat" type="TextureRect" parent="BG/5"]
+layout_mode = 0
+offset_left = 1155.0
+offset_right = 2311.0
+offset_bottom = 650.0
+texture = ExtResource("3_vr446")
+stretch_mode = 4
+
+[node name="6" type="TextureRect" parent="BG"]
 layout_mode = 0
 offset_right = 1154.0
+offset_bottom = 650.0
+texture = ExtResource("2_kuu84")
+stretch_mode = 4
+
+[node name="Repeat" type="TextureRect" parent="BG/6"]
+layout_mode = 0
+offset_left = 1154.0
+offset_right = 2308.0
 offset_bottom = 650.0
 texture = ExtResource("2_kuu84")
 stretch_mode = 4

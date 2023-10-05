@@ -8,7 +8,7 @@ func _ready():
 func _process(delta):
 	GameSettings.fpsShown = button_pressed
 	if button_pressed:
-		$"../../FPS Display".set_text("FPS: " + str(Engine.get_frames_per_second()));
-		$"../../FPS Display".visible = true
+		$"../../../FPS Display".set_text("FPS: " + str(Engine.get_frames_per_second()));
+		$"../../../FPS Display".visible = true
 	else:
-		$"../../FPS Display".visible = false
+		$"../../../FPS Display".visible = false
