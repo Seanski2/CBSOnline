@@ -27,17 +27,17 @@ func _init(charName: String):
 	
 	jsonPath = jsonPath + internalName
 	jsonData = load_json(jsonPath)
-	
-	name = jsonData["name"]
-	maxHealth = jsonData[name]["baseStats"]["health"]
-	speed = jsonData[name]["baseStats"]["speed"]
-	mp = jsonData[name]["baseStats"]["magic"]
-	melee = jsonData[name]["baseStats"]["attack"]
-	defense = jsonData[name]["baseStats"]["defense"]
-	magic = jsonData[name]["baseStats"]["magicAttack"]
-	magDefense = jsonData[name]["baseStats"]["magicDefense"]
-	
-	health = maxHealth
+#
+#	name = jsonData["name"]
+#	maxHealth = jsonData[name]["baseStats"]["health"]
+#	speed = jsonData[name]["baseStats"]["speed"]
+#	mp = jsonData[name]["baseStats"]["magic"]
+#	melee = jsonData[name]["baseStats"]["attack"]
+#	defense = jsonData[name]["baseStats"]["defense"]
+#	magic = jsonData[name]["baseStats"]["magicAttack"]
+#	magDefense = jsonData[name]["baseStats"]["magicDefense"]
+#
+#	health = maxHealth
 	
 
 func load_json(filePath: String):

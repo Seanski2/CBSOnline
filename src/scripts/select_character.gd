@@ -32,11 +32,11 @@ func _pressed():
 		
 		if not charData.jsonData.element1 == "none":
 			elementDisplays[0].visible = true;
-			elementDisplays[0].set_texture(load("res://Assets/Sprites/Symbols/Elements/" + elem1.jsonData.name + ".png"))
+			elementDisplays[0].set_texture(load("res://Assets/Sprites/Symbols/Elements/" + elem1.jsonData.name + "Tiny.png"))
 		
 		if not charData.jsonData.element2 == "none":
 			elementDisplays[1].visible = true;
-			elementDisplays[1].set_texture(load("res://Assets/Sprites/Symbols/Elements/" + elem2.jsonData.name + ".png"))
+			elementDisplays[1].set_texture(load("res://Assets/Sprites/Symbols/Elements/" + elem2.jsonData.name + "Tiny.png"))
 		
 		characterDisplays[CSSMenuVars.teamSelected].set_texture(load("res://Assets/Sprites/Characters/" + charData.jsonData.sprite));
 		
