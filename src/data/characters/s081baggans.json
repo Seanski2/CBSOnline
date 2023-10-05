@@ -2,8 +2,8 @@
 	"displayName": "Baggans",
 	"description": "Placeholder.",
 	"sprite": "S08-1Baggans.png",
-	"element1": "none",
-	"element2": "none",
+	"element1": "darkness",
+	"element2": "undead",
 	"baseStats": {
 		"health": 0,
 		"speed": 0,

@@ -2,7 +2,7 @@
 	"displayName": "Bob",
 	"description": "Placeholder.",
 	"sprite": "S08-4Bob.png",
-	"element1": "none",
+	"element1": "metal",
 	"element2": "none",
 	"baseStats": {
 		"health": 0,
