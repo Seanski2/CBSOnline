@@ -97,5 +97,4 @@ script = ExtResource("4_8x7r3")
 metadata/loadScene = "res://src/scenes/character_selection.tscn"
 
 [node name="Options Menu" parent="." instance=ExtResource("28_8k6yw")]
-visible = false
 layout_mode = 1

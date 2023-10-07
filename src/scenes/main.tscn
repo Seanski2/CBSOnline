@@ -1,7 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://c3wx8q3a7suvu"]
+[gd_scene load_steps=13 format=3 uid="uid://c3wx8q3a7suvu"]
 
 [ext_resource type="Script" path="res://src/scripts/GameManager.gd" id="1_u7j65"]
 [ext_resource type="Texture2D" uid="uid://dyyoiwymvafuq" path="res://Assets/Sprites/BGs/Mozart's Domain/BG.png" id="2_85fp2"]
+[ext_resource type="Texture2D" uid="uid://dkt0n4gelmtx2" path="res://Assets/Sprites/UI/ref.png" id="2_fa50q"]
+[ext_resource type="Texture2D" uid="uid://cfa4ucoyat7wy" path="res://Assets/Sprites/CSS/Squidward.png" id="4_flsi3"]
+[ext_resource type="Theme" uid="uid://cm6ff8iw874fv" path="res://Assets/Themes/text_boxes.tres" id="5_ctmrh"]
+[ext_resource type="Texture2D" uid="uid://n8wsevbul4op" path="res://Assets/Sprites/Symbols/State Graphics/ZeeForceField.png" id="6_gpwoq"]
+[ext_resource type="Texture2D" uid="uid://vyp5ara6jdtr" path="res://Assets/Sprites/UI/Battle/BarUnder.png" id="6_ktnkg"]
+[ext_resource type="Texture2D" uid="uid://cx2fkwqvj21p4" path="res://Assets/Sprites/UI/Battle/HealthBar.png" id="7_8tlxy"]
+[ext_resource type="Texture2D" uid="uid://b0tava5w1yr8v" path="res://Assets/Sprites/Symbols/State Graphics/Stun.png" id="7_a3h6b"]
+[ext_resource type="Texture2D" uid="uid://pmui6qg47cyq" path="res://Assets/Sprites/UI/Battle/BattleIcons.png" id="8_k52cm"]
+[ext_resource type="Texture2D" uid="uid://dqdef76uu223u" path="res://Assets/Sprites/UI/Battle/MPBar.png" id="8_pieww"]
+[ext_resource type="Texture2D" uid="uid://dcg5ic8i3p4ww" path="res://Assets/Sprites/UI/Battle/DebuffBuff.png" id="12_g4b7h"]
 
 [node name="Node2D" type="Control"]
 layout_mode = 3
@@ -9,6 +19,15 @@ anchors_preset = 0
 
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("1_u7j65")
+
+[node name="Reference" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 648.0
+texture = ExtResource("2_fa50q")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="BG" type="TextureRect" parent="."]
 visible = false
@@ -19,19 +38,1208 @@ texture = ExtResource("2_85fp2")
 expand_mode = 2
 stretch_mode = 4
 
-[node name="Player Team" type="Control" parent="."]
-layout_mode = 1
+[node name="Allies" type="Control" parent="."]
 anchors_preset = 0
-offset_right = 580.0
+offset_right = 1152.0
 offset_bottom = 649.0
 
-[node name="Enemy Team" type="Control" parent="."]
-layout_direction = 3
+[node name="Layout" type="HBoxContainer" parent="Allies"]
 layout_mode = 1
-anchors_preset = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -741.0
+offset_top = -202.0
+offset_right = 412.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = -58
+
+[node name="Ally 1" type="Control" parent="Allies/Layout"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="Portrait" type="TextureRect" parent="Allies/Layout/Ally 1"]
+layout_mode = 2
+offset_left = 56.0
+offset_top = 79.0
+offset_right = 120.0
+offset_bottom = 144.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("4_flsi3")
+stretch_mode = 4
+
+[node name="Name" type="Label" parent="Allies/Layout/Ally 1"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 139.0
+offset_right = 140.0
+offset_bottom = 169.0
+theme = ExtResource("5_ctmrh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "???"
+horizontal_alignment = 1
+
+[node name="HP" type="TextureProgressBar" parent="Allies/Layout/Ally 1"]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 101.0
+offset_right = 265.0
+offset_bottom = 111.0
+rounded = true
+texture_under = ExtResource("6_ktnkg")
+texture_progress = ExtResource("7_8tlxy")
+
+[node name="Label" type="Label" parent="Allies/Layout/Ally 1/HP"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -18.0
+offset_top = -12.0
+offset_bottom = 12.0
+grow_vertical = 2
+theme = ExtResource("5_ctmrh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 16
+text = "HP"
+horizontal_alignment = 1
+
+[node name="MP" type="TextureProgressBar" parent="Allies/Layout/Ally 1"]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 116.0
+offset_right = 265.0
+offset_bottom = 126.0
+rounded = true
+texture_under = ExtResource("6_ktnkg")
+texture_progress = ExtResource("8_pieww")
+
+[node name="Label" type="Label" parent="Allies/Layout/Ally 1/MP"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -21.0
+offset_top = -12.0
+offset_bottom = 12.0
+grow_vertical = 2
+theme = ExtResource("5_ctmrh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 16
+text = "MP"
+horizontal_alignment = 1
+
+[node name="Positive Status" type="TextureRect" parent="Allies/Layout/Ally 1"]
+visible = false
+layout_mode = 0
+offset_left = 101.0
+offset_top = 72.0
+offset_right = 165.0
+offset_bottom = 136.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_gpwoq")
+
+[node name="Negative Status" type="TextureRect" parent="Allies/Layout/Ally 1"]
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 72.0
+offset_right = 110.0
+offset_bottom = 136.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_a3h6b")
+
+[node name="Selected Action" type="Sprite2D" parent="Allies/Layout/Ally 1"]
+visible = false
+position = Vector2(87, 179)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_k52cm")
+hframes = 7
+
+[node name="Stat Changes" type="Control" parent="Allies/Layout/Ally 1"]
+anchors_preset = 0
+offset_left = 167.0
+offset_top = 127.0
+offset_right = 267.0
+offset_bottom = 191.0
+
+[node name="List" type="VBoxContainer" parent="Allies/Layout/Ally 1/Stat Changes"]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 101.0
+offset_bottom = 73.0
+theme_override_constants/separation = 13
+
+[node name="ATK" type="Control" parent="Allies/Layout/Ally 1/Stat Changes/List"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Allies/Layout/Ally 1/Stat Changes/List/ATK"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 45.0
+offset_bottom = 27.0
+theme = ExtResource("5_ctmrh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 15
+text = "ATK"
+horizontal_alignment = 1
+
+[node name="Effect 1" type="Sprite2D" parent="Allies/Layout/Ally 1/Stat Changes/List/ATK"]
+position = Vector2(51, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 2" type="Sprite2D" parent="Allies/Layout/Ally 1/Stat Changes/List/ATK"]
+position = Vector2(71, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 3" type="Sprite2D" parent="Allies/Layout/Ally 1/Stat Changes/List/ATK"]
+position = Vector2(91, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="DEF" type="Control" parent="Allies/Layout/Ally 1/Stat Changes/List"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Allies/Layout/Ally 1/Stat Changes/List/DEF"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 45.0
+offset_bottom = 27.0
+theme = ExtResource("5_ctmrh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 15
+text = "DEF"
+horizontal_alignment = 1
+
+[node name="Effect 1" type="Sprite2D" parent="Allies/Layout/Ally 1/Stat Changes/List/DEF"]
+position = Vector2(51, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 2" type="Sprite2D" parent="Allies/Layout/Ally 1/Stat Changes/List/DEF"]
+position = Vector2(71, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 3" type="Sprite2D" parent="Allies/Layout/Ally 1/Stat Changes/List/DEF"]
+position = Vector2(91, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="MAT" type="Control" parent="Allies/Layout/Ally 1/Stat Changes/List"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Allies/Layout/Ally 1/Stat Changes/List/MAT"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 45.0
+offset_bottom = 27.0
+theme = ExtResource("5_ctmrh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 15
+text = "MAT"
+horizontal_alignment = 1
+
+[node name="Effect 1" type="Sprite2D" parent="Allies/Layout/Ally 1/Stat Changes/List/MAT"]
+position = Vector2(51, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 2" type="Sprite2D" parent="Allies/Layout/Ally 1/Stat Changes/List/MAT"]
+position = Vector2(71, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 3" type="Sprite2D" parent="Allies/Layout/Ally 1/Stat Changes/List/MAT"]
+position = Vector2(91, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="MDF" type="Control" parent="Allies/Layout/Ally 1/Stat Changes/List"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Allies/Layout/Ally 1/Stat Changes/List/MDF"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 45.0
+offset_bottom = 27.0
+theme = ExtResource("5_ctmrh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 15
+text = "MDF"
+horizontal_alignment = 1
+
+[node name="Effect 1" type="Sprite2D" parent="Allies/Layout/Ally 1/Stat Changes/List/MDF"]
+position = Vector2(51, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 2" type="Sprite2D" parent="Allies/Layout/Ally 1/Stat Changes/List/MDF"]
+position = Vector2(71, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 3" type="Sprite2D" parent="Allies/Layout/Ally 1/Stat Changes/List/MDF"]
+position = Vector2(91, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="SPE" type="Control" parent="Allies/Layout/Ally 1/Stat Changes/List"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Allies/Layout/Ally 1/Stat Changes/List/SPE"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 45.0
+offset_bottom = 30.0
+theme = ExtResource("5_ctmrh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 15
+text = "SPE"
+horizontal_alignment = 1
+
+[node name="Effect 1" type="Sprite2D" parent="Allies/Layout/Ally 1/Stat Changes/List/SPE"]
+position = Vector2(51, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 2" type="Sprite2D" parent="Allies/Layout/Ally 1/Stat Changes/List/SPE"]
+position = Vector2(71, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 3" type="Sprite2D" parent="Allies/Layout/Ally 1/Stat Changes/List/SPE"]
+position = Vector2(91, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Ally 2" type="Control" parent="Allies/Layout"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="Portrait" type="TextureRect" parent="Allies/Layout/Ally 2"]
+layout_mode = 2
+offset_left = 56.0
+offset_top = 79.0
+offset_right = 120.0
+offset_bottom = 144.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("4_flsi3")
+stretch_mode = 4
+
+[node name="Name" type="Label" parent="Allies/Layout/Ally 2"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 139.0
+offset_right = 140.0
+offset_bottom = 169.0
+theme = ExtResource("5_ctmrh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "???"
+horizontal_alignment = 1
+
+[node name="HP" type="TextureProgressBar" parent="Allies/Layout/Ally 2"]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 101.0
+offset_right = 265.0
+offset_bottom = 111.0
+rounded = true
+texture_under = ExtResource("6_ktnkg")
+texture_progress = ExtResource("7_8tlxy")
+
+[node name="Label" type="Label" parent="Allies/Layout/Ally 2/HP"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -18.0
+offset_top = -12.0
+offset_bottom = 12.0
+grow_vertical = 2
+theme = ExtResource("5_ctmrh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 16
+text = "HP"
+horizontal_alignment = 1
+
+[node name="MP" type="TextureProgressBar" parent="Allies/Layout/Ally 2"]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 116.0
+offset_right = 265.0
+offset_bottom = 126.0
+rounded = true
+texture_under = ExtResource("6_ktnkg")
+texture_progress = ExtResource("8_pieww")
+
+[node name="Label" type="Label" parent="Allies/Layout/Ally 2/MP"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -21.0
+offset_top = -12.0
+offset_bottom = 12.0
+grow_vertical = 2
+theme = ExtResource("5_ctmrh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 16
+text = "MP"
+horizontal_alignment = 1
+
+[node name="Positive Status" type="TextureRect" parent="Allies/Layout/Ally 2"]
+visible = false
+layout_mode = 0
+offset_left = 101.0
+offset_top = 72.0
+offset_right = 165.0
+offset_bottom = 136.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_gpwoq")
+
+[node name="Negative Status" type="TextureRect" parent="Allies/Layout/Ally 2"]
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 72.0
+offset_right = 110.0
+offset_bottom = 136.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_a3h6b")
+
+[node name="Selected Action" type="Sprite2D" parent="Allies/Layout/Ally 2"]
+visible = false
+position = Vector2(87, 179)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_k52cm")
+hframes = 7
+
+[node name="Stat Changes" type="Control" parent="Allies/Layout/Ally 2"]
+anchors_preset = 0
+offset_left = 167.0
+offset_top = 127.0
+offset_right = 267.0
+offset_bottom = 191.0
+
+[node name="List" type="VBoxContainer" parent="Allies/Layout/Ally 2/Stat Changes"]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 101.0
+offset_bottom = 73.0
+theme_override_constants/separation = 13
+
+[node name="ATK" type="Control" parent="Allies/Layout/Ally 2/Stat Changes/List"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Allies/Layout/Ally 2/Stat Changes/List/ATK"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 45.0
+offset_bottom = 27.0
+theme = ExtResource("5_ctmrh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 15
+text = "ATK"
+horizontal_alignment = 1
+
+[node name="Effect 1" type="Sprite2D" parent="Allies/Layout/Ally 2/Stat Changes/List/ATK"]
+position = Vector2(51, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 2" type="Sprite2D" parent="Allies/Layout/Ally 2/Stat Changes/List/ATK"]
+position = Vector2(71, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 3" type="Sprite2D" parent="Allies/Layout/Ally 2/Stat Changes/List/ATK"]
+position = Vector2(91, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="DEF" type="Control" parent="Allies/Layout/Ally 2/Stat Changes/List"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Allies/Layout/Ally 2/Stat Changes/List/DEF"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 45.0
+offset_bottom = 27.0
+theme = ExtResource("5_ctmrh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 15
+text = "DEF"
+horizontal_alignment = 1
+
+[node name="Effect 1" type="Sprite2D" parent="Allies/Layout/Ally 2/Stat Changes/List/DEF"]
+position = Vector2(51, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 2" type="Sprite2D" parent="Allies/Layout/Ally 2/Stat Changes/List/DEF"]
+position = Vector2(71, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 3" type="Sprite2D" parent="Allies/Layout/Ally 2/Stat Changes/List/DEF"]
+position = Vector2(91, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="MAT" type="Control" parent="Allies/Layout/Ally 2/Stat Changes/List"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Allies/Layout/Ally 2/Stat Changes/List/MAT"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 45.0
+offset_bottom = 27.0
+theme = ExtResource("5_ctmrh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 15
+text = "MAT"
+horizontal_alignment = 1
+
+[node name="Effect 1" type="Sprite2D" parent="Allies/Layout/Ally 2/Stat Changes/List/MAT"]
+position = Vector2(51, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 2" type="Sprite2D" parent="Allies/Layout/Ally 2/Stat Changes/List/MAT"]
+position = Vector2(71, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 3" type="Sprite2D" parent="Allies/Layout/Ally 2/Stat Changes/List/MAT"]
+position = Vector2(91, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="MDF" type="Control" parent="Allies/Layout/Ally 2/Stat Changes/List"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Allies/Layout/Ally 2/Stat Changes/List/MDF"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 45.0
+offset_bottom = 27.0
+theme = ExtResource("5_ctmrh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 15
+text = "MDF"
+horizontal_alignment = 1
+
+[node name="Effect 1" type="Sprite2D" parent="Allies/Layout/Ally 2/Stat Changes/List/MDF"]
+position = Vector2(51, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 2" type="Sprite2D" parent="Allies/Layout/Ally 2/Stat Changes/List/MDF"]
+position = Vector2(71, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 3" type="Sprite2D" parent="Allies/Layout/Ally 2/Stat Changes/List/MDF"]
+position = Vector2(91, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="SPE" type="Control" parent="Allies/Layout/Ally 2/Stat Changes/List"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Allies/Layout/Ally 2/Stat Changes/List/SPE"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 45.0
+offset_bottom = 30.0
+theme = ExtResource("5_ctmrh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 15
+text = "SPE"
+horizontal_alignment = 1
+
+[node name="Effect 1" type="Sprite2D" parent="Allies/Layout/Ally 2/Stat Changes/List/SPE"]
+position = Vector2(51, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 2" type="Sprite2D" parent="Allies/Layout/Ally 2/Stat Changes/List/SPE"]
+position = Vector2(71, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 3" type="Sprite2D" parent="Allies/Layout/Ally 2/Stat Changes/List/SPE"]
+position = Vector2(91, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Ally 3" type="Control" parent="Allies/Layout"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="Portrait" type="TextureRect" parent="Allies/Layout/Ally 3"]
+layout_mode = 2
+offset_left = 56.0
+offset_top = 79.0
+offset_right = 120.0
+offset_bottom = 144.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("4_flsi3")
+stretch_mode = 4
+
+[node name="Name" type="Label" parent="Allies/Layout/Ally 3"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 139.0
+offset_right = 140.0
+offset_bottom = 169.0
+theme = ExtResource("5_ctmrh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "???"
+horizontal_alignment = 1
+
+[node name="HP" type="TextureProgressBar" parent="Allies/Layout/Ally 3"]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 101.0
+offset_right = 265.0
+offset_bottom = 111.0
+rounded = true
+texture_under = ExtResource("6_ktnkg")
+texture_progress = ExtResource("7_8tlxy")
+
+[node name="Label" type="Label" parent="Allies/Layout/Ally 3/HP"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -18.0
+offset_top = -12.0
+offset_bottom = 12.0
+grow_vertical = 2
+theme = ExtResource("5_ctmrh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 16
+text = "HP"
+horizontal_alignment = 1
+
+[node name="MP" type="TextureProgressBar" parent="Allies/Layout/Ally 3"]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 116.0
+offset_right = 265.0
+offset_bottom = 126.0
+rounded = true
+texture_under = ExtResource("6_ktnkg")
+texture_progress = ExtResource("8_pieww")
+
+[node name="Label" type="Label" parent="Allies/Layout/Ally 3/MP"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -21.0
+offset_top = -12.0
+offset_bottom = 12.0
+grow_vertical = 2
+theme = ExtResource("5_ctmrh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 16
+text = "MP"
+horizontal_alignment = 1
+
+[node name="Positive Status" type="TextureRect" parent="Allies/Layout/Ally 3"]
+visible = false
+layout_mode = 0
+offset_left = 101.0
+offset_top = 72.0
+offset_right = 165.0
+offset_bottom = 136.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_gpwoq")
+
+[node name="Negative Status" type="TextureRect" parent="Allies/Layout/Ally 3"]
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 72.0
+offset_right = 110.0
+offset_bottom = 136.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_a3h6b")
+
+[node name="Selected Action" type="Sprite2D" parent="Allies/Layout/Ally 3"]
+visible = false
+position = Vector2(87, 179)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_k52cm")
+hframes = 7
+
+[node name="Stat Changes" type="Control" parent="Allies/Layout/Ally 3"]
+anchors_preset = 0
+offset_left = 167.0
+offset_top = 127.0
+offset_right = 267.0
+offset_bottom = 191.0
+
+[node name="List" type="VBoxContainer" parent="Allies/Layout/Ally 3/Stat Changes"]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 101.0
+offset_bottom = 73.0
+theme_override_constants/separation = 13
+
+[node name="ATK" type="Control" parent="Allies/Layout/Ally 3/Stat Changes/List"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Allies/Layout/Ally 3/Stat Changes/List/ATK"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 45.0
+offset_bottom = 27.0
+theme = ExtResource("5_ctmrh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 15
+text = "ATK"
+horizontal_alignment = 1
+
+[node name="Effect 1" type="Sprite2D" parent="Allies/Layout/Ally 3/Stat Changes/List/ATK"]
+position = Vector2(51, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 2" type="Sprite2D" parent="Allies/Layout/Ally 3/Stat Changes/List/ATK"]
+position = Vector2(71, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 3" type="Sprite2D" parent="Allies/Layout/Ally 3/Stat Changes/List/ATK"]
+position = Vector2(91, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="DEF" type="Control" parent="Allies/Layout/Ally 3/Stat Changes/List"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Allies/Layout/Ally 3/Stat Changes/List/DEF"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 45.0
+offset_bottom = 27.0
+theme = ExtResource("5_ctmrh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 15
+text = "DEF"
+horizontal_alignment = 1
+
+[node name="Effect 1" type="Sprite2D" parent="Allies/Layout/Ally 3/Stat Changes/List/DEF"]
+position = Vector2(51, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 2" type="Sprite2D" parent="Allies/Layout/Ally 3/Stat Changes/List/DEF"]
+position = Vector2(71, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 3" type="Sprite2D" parent="Allies/Layout/Ally 3/Stat Changes/List/DEF"]
+position = Vector2(91, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="MAT" type="Control" parent="Allies/Layout/Ally 3/Stat Changes/List"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Allies/Layout/Ally 3/Stat Changes/List/MAT"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 45.0
+offset_bottom = 27.0
+theme = ExtResource("5_ctmrh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 15
+text = "MAT"
+horizontal_alignment = 1
+
+[node name="Effect 1" type="Sprite2D" parent="Allies/Layout/Ally 3/Stat Changes/List/MAT"]
+position = Vector2(51, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 2" type="Sprite2D" parent="Allies/Layout/Ally 3/Stat Changes/List/MAT"]
+position = Vector2(71, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 3" type="Sprite2D" parent="Allies/Layout/Ally 3/Stat Changes/List/MAT"]
+position = Vector2(91, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="MDF" type="Control" parent="Allies/Layout/Ally 3/Stat Changes/List"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Allies/Layout/Ally 3/Stat Changes/List/MDF"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 45.0
+offset_bottom = 27.0
+theme = ExtResource("5_ctmrh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 15
+text = "MDF"
+horizontal_alignment = 1
+
+[node name="Effect 1" type="Sprite2D" parent="Allies/Layout/Ally 3/Stat Changes/List/MDF"]
+position = Vector2(51, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 2" type="Sprite2D" parent="Allies/Layout/Ally 3/Stat Changes/List/MDF"]
+position = Vector2(71, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 3" type="Sprite2D" parent="Allies/Layout/Ally 3/Stat Changes/List/MDF"]
+position = Vector2(91, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="SPE" type="Control" parent="Allies/Layout/Ally 3/Stat Changes/List"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Allies/Layout/Ally 3/Stat Changes/List/SPE"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 45.0
+offset_bottom = 30.0
+theme = ExtResource("5_ctmrh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 15
+text = "SPE"
+horizontal_alignment = 1
+
+[node name="Effect 1" type="Sprite2D" parent="Allies/Layout/Ally 3/Stat Changes/List/SPE"]
+position = Vector2(51, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 2" type="Sprite2D" parent="Allies/Layout/Ally 3/Stat Changes/List/SPE"]
+position = Vector2(71, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 3" type="Sprite2D" parent="Allies/Layout/Ally 3/Stat Changes/List/SPE"]
+position = Vector2(91, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Ally 4" type="Control" parent="Allies/Layout"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="Portrait" type="TextureRect" parent="Allies/Layout/Ally 4"]
+layout_mode = 2
+offset_left = 56.0
+offset_top = 79.0
+offset_right = 120.0
+offset_bottom = 144.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("4_flsi3")
+stretch_mode = 4
+
+[node name="Name" type="Label" parent="Allies/Layout/Ally 4"]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 139.0
+offset_right = 140.0
+offset_bottom = 169.0
+theme = ExtResource("5_ctmrh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "???"
+horizontal_alignment = 1
+
+[node name="HP" type="TextureProgressBar" parent="Allies/Layout/Ally 4"]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 101.0
+offset_right = 265.0
+offset_bottom = 111.0
+rounded = true
+texture_under = ExtResource("6_ktnkg")
+texture_progress = ExtResource("7_8tlxy")
+
+[node name="Label" type="Label" parent="Allies/Layout/Ally 4/HP"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -18.0
+offset_top = -12.0
+offset_bottom = 12.0
+grow_vertical = 2
+theme = ExtResource("5_ctmrh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 16
+text = "HP"
+horizontal_alignment = 1
+
+[node name="MP" type="TextureProgressBar" parent="Allies/Layout/Ally 4"]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 116.0
+offset_right = 265.0
+offset_bottom = 126.0
+rounded = true
+texture_under = ExtResource("6_ktnkg")
+texture_progress = ExtResource("8_pieww")
+
+[node name="Label" type="Label" parent="Allies/Layout/Ally 4/MP"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -21.0
+offset_top = -12.0
+offset_bottom = 12.0
+grow_vertical = 2
+theme = ExtResource("5_ctmrh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 16
+text = "MP"
+horizontal_alignment = 1
+
+[node name="Positive Status" type="TextureRect" parent="Allies/Layout/Ally 4"]
+visible = false
+layout_mode = 0
+offset_left = 101.0
+offset_top = 72.0
+offset_right = 165.0
+offset_bottom = 136.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_gpwoq")
+
+[node name="Negative Status" type="TextureRect" parent="Allies/Layout/Ally 4"]
+visible = false
+layout_mode = 0
+offset_left = 46.0
+offset_top = 72.0
+offset_right = 110.0
+offset_bottom = 136.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_a3h6b")
+
+[node name="Selected Action" type="Sprite2D" parent="Allies/Layout/Ally 4"]
+visible = false
+position = Vector2(87, 179)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_k52cm")
+hframes = 7
+
+[node name="Stat Changes" type="Control" parent="Allies/Layout/Ally 4"]
+anchors_preset = 0
+offset_left = 167.0
+offset_top = 127.0
+offset_right = 267.0
+offset_bottom = 191.0
+
+[node name="List" type="VBoxContainer" parent="Allies/Layout/Ally 4/Stat Changes"]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 101.0
+offset_bottom = 73.0
+theme_override_constants/separation = 13
+
+[node name="ATK" type="Control" parent="Allies/Layout/Ally 4/Stat Changes/List"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Allies/Layout/Ally 4/Stat Changes/List/ATK"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 45.0
+offset_bottom = 27.0
+theme = ExtResource("5_ctmrh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 15
+text = "ATK"
+horizontal_alignment = 1
+
+[node name="Effect 1" type="Sprite2D" parent="Allies/Layout/Ally 4/Stat Changes/List/ATK"]
+position = Vector2(51, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 2" type="Sprite2D" parent="Allies/Layout/Ally 4/Stat Changes/List/ATK"]
+position = Vector2(71, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 3" type="Sprite2D" parent="Allies/Layout/Ally 4/Stat Changes/List/ATK"]
+position = Vector2(91, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="DEF" type="Control" parent="Allies/Layout/Ally 4/Stat Changes/List"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Allies/Layout/Ally 4/Stat Changes/List/DEF"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 45.0
+offset_bottom = 27.0
+theme = ExtResource("5_ctmrh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 15
+text = "DEF"
+horizontal_alignment = 1
+
+[node name="Effect 1" type="Sprite2D" parent="Allies/Layout/Ally 4/Stat Changes/List/DEF"]
+position = Vector2(51, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 2" type="Sprite2D" parent="Allies/Layout/Ally 4/Stat Changes/List/DEF"]
+position = Vector2(71, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 3" type="Sprite2D" parent="Allies/Layout/Ally 4/Stat Changes/List/DEF"]
+position = Vector2(91, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="MAT" type="Control" parent="Allies/Layout/Ally 4/Stat Changes/List"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Allies/Layout/Ally 4/Stat Changes/List/MAT"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 45.0
+offset_bottom = 27.0
+theme = ExtResource("5_ctmrh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 15
+text = "MAT"
+horizontal_alignment = 1
+
+[node name="Effect 1" type="Sprite2D" parent="Allies/Layout/Ally 4/Stat Changes/List/MAT"]
+position = Vector2(51, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 2" type="Sprite2D" parent="Allies/Layout/Ally 4/Stat Changes/List/MAT"]
+position = Vector2(71, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 3" type="Sprite2D" parent="Allies/Layout/Ally 4/Stat Changes/List/MAT"]
+position = Vector2(91, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="MDF" type="Control" parent="Allies/Layout/Ally 4/Stat Changes/List"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Allies/Layout/Ally 4/Stat Changes/List/MDF"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 45.0
+offset_bottom = 27.0
+theme = ExtResource("5_ctmrh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 15
+text = "MDF"
+horizontal_alignment = 1
+
+[node name="Effect 1" type="Sprite2D" parent="Allies/Layout/Ally 4/Stat Changes/List/MDF"]
+position = Vector2(51, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 2" type="Sprite2D" parent="Allies/Layout/Ally 4/Stat Changes/List/MDF"]
+position = Vector2(71, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 3" type="Sprite2D" parent="Allies/Layout/Ally 4/Stat Changes/List/MDF"]
+position = Vector2(91, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="SPE" type="Control" parent="Allies/Layout/Ally 4/Stat Changes/List"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Allies/Layout/Ally 4/Stat Changes/List/SPE"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 45.0
+offset_bottom = 30.0
+theme = ExtResource("5_ctmrh")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 15
+text = "SPE"
+horizontal_alignment = 1
+
+[node name="Effect 1" type="Sprite2D" parent="Allies/Layout/Ally 4/Stat Changes/List/SPE"]
+position = Vector2(51, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 2" type="Sprite2D" parent="Allies/Layout/Ally 4/Stat Changes/List/SPE"]
+position = Vector2(71, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Effect 3" type="Sprite2D" parent="Allies/Layout/Ally 4/Stat Changes/List/SPE"]
+position = Vector2(91, 13)
+texture = ExtResource("12_g4b7h")
+hframes = 3
+
+[node name="Action Select" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_top = 450.0
+offset_right = 182.0
+offset_bottom = 647.0
+
+[node name="PrevAction2" type="Button" parent="Action Select"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 15.0
+offset_top = -82.0
+offset_right = 33.0
+offset_bottom = -47.0
+grow_vertical = 2
+theme = ExtResource("5_ctmrh")
+text = "<"
+
+[node name="NextAction" type="Button" parent="Action Select"]
+layout_mode = 1
+anchors_preset = 6
 anchor_left = 1.0
+anchor_top = 0.5
 anchor_right = 1.0
-offset_left = -1155.0
-offset_right = -575.0
-offset_bottom = 649.0
+anchor_bottom = 0.5
+offset_left = -39.0
+offset_top = -82.0
+offset_right = -21.0
+offset_bottom = -47.0
 grow_horizontal = 0
+grow_vertical = 2
+theme = ExtResource("5_ctmrh")
+text = ">"
+
+[node name="Prev" type="Sprite2D" parent="Action Select"]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(52, 34)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_k52cm")
+hframes = 7
+frame = 4
+
+[node name="Next" type="Sprite2D" parent="Action Select"]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(123, 34)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_k52cm")
+hframes = 7
+frame = 1
+
+[node name="Focused" type="TextureButton" parent="Action Select"]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 2.0
+offset_right = 120.0
+offset_bottom = 66.0
+mouse_default_cursor_shape = 2
+theme = ExtResource("5_ctmrh")
+
+[node name="Focused" type="Sprite2D" parent="Action Select/Focused"]
+position = Vector2(32, 32)
+texture = ExtResource("8_k52cm")
+hframes = 7
