@@ -4,32 +4,31 @@
 [ext_resource type="Texture2D" uid="uid://c0hjtjf4gp4i4" path="res://Assets/Sprites/UI/VS/VSRed.png" id="2_64e7d"]
 [ext_resource type="Texture2D" uid="uid://cuq7onpn2fitn" path="res://Assets/Sprites/Characters/Empty.png" id="3_dbrt7"]
 
-[sub_resource type="Animation" id="Animation_wt3p5"]
-resource_name = "SlideIN"
-length = 2.0
+[sub_resource type="Animation" id="Animation_ex31r"]
+resource_name = "BlueSlide"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
+tracks/0/path = NodePath("../VsBlue:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.6),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(0.466517, 1),
 "update": 0,
-"values": [Vector2(576, 740), Vector2(576, 324)]
+"values": [Vector2(576, -161.625), Vector2(576, 324)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("../VsBlue:position")
-tracks/1/interp = 1
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.6, 1.2),
-"transitions": PackedFloat32Array(0.466517, 0.466517, 1),
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(576, -150.115), Vector2(576, -150.115), Vector2(576, 324)]
+"values": [Vector2(575, 736), Vector2(575, 354)]
 }
 
 [sub_resource type="Animation" id="Animation_2mefn"]
@@ -74,19 +73,32 @@ tracks/0/keys = {
 "values": [Vector2(575, 740), Vector2(575, 324)]
 }
 
-[sub_resource type="Animation" id="Animation_ex31r"]
-resource_name = "BlueSlide"
+[sub_resource type="Animation" id="Animation_wt3p5"]
+resource_name = "SlideIN"
+length = 2.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("../VsBlue:position")
+tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(0, 0.6),
 "transitions": PackedFloat32Array(0.466517, 1),
 "update": 0,
-"values": [Vector2(576, -161.625), Vector2(576, 324)]
+"values": [Vector2(576, 740), Vector2(576, 324)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../VsBlue:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.2),
+"transitions": PackedFloat32Array(0.466517, 0.466517, 1),
+"update": 0,
+"values": [Vector2(576, -150.115), Vector2(576, -150.115), Vector2(576, 324)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vp1cn"]
@@ -111,7 +123,7 @@ texture = ExtResource("2_64e7d")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../VsRed")
-autoplay = "SlideIN"
+autoplay = "BlueSlide"
 libraries = {
 "": SubResource("AnimationLibrary_vp1cn")
 }

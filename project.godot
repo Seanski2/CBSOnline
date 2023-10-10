@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 CSSMenuVars="*res://src/scripts/css_menu.gd"
 GameSettings="*res://src/scripts/game_settings.gd"
+BattleVars="*res://src/scripts/BattleVars.gd"
 
 [display]
 
