@@ -6,7 +6,6 @@ var jsonPath = "res://src/data/characters/"
 var jsonData = {}
 var internalName = ""
 
-var name = ""
 var displayName
 var element1
 var element2
@@ -27,17 +26,16 @@ func _init(charName: String):
 	
 	jsonPath = jsonPath + internalName
 	jsonData = load_json(jsonPath)
-#
-#	name = jsonData["name"]
-#	maxHealth = jsonData[name]["baseStats"]["health"]
-#	speed = jsonData[name]["baseStats"]["speed"]
-#	mp = jsonData[name]["baseStats"]["magic"]
-#	melee = jsonData[name]["baseStats"]["attack"]
-#	defense = jsonData[name]["baseStats"]["defense"]
-#	magic = jsonData[name]["baseStats"]["magicAttack"]
-#	magDefense = jsonData[name]["baseStats"]["magicDefense"]
-#
-#	health = maxHealth
+
+	maxHealth = jsonData["baseStats"]["health"]
+	speed = jsonData["baseStats"]["speed"]
+	mp = jsonData["baseStats"]["magic"]
+	melee = jsonData["baseStats"]["attack"]
+	defense = jsonData["baseStats"]["defense"]
+	magic = jsonData["baseStats"]["magicAttack"]
+	magDefense = jsonData["baseStats"]["magicDefense"]
+
+	health = maxHealth
 	
 
 func load_json(filePath: String):
@@ -63,4 +61,7 @@ func basicAttack(char: Character, isMelee: bool = true, basePower: int = 4):
 		attackStat = magic
 		defenseStat = char.magDefense
 	var damage = (9 * basePower * attackStat)/defenseStat
-	char.health -= damage
+	char.takeDamage(damage)
+	
+func takeDamage(dmg: int):
+	health -= dmg
