@@ -1,8 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bnvwjv3mupr44"]
+[gd_scene load_steps=12 format=3 uid="uid://bnvwjv3mupr44"]
 
 [ext_resource type="Texture2D" uid="uid://bac174kn7eyfn" path="res://Assets/Sprites/UI/VS/VSBlue.png" id="1_l15q2"]
+[ext_resource type="Texture2D" uid="uid://b5ea1ioky6620" path="res://Assets/Sprites/UI/VS/VSBG.png" id="1_u0bfg"]
 [ext_resource type="Texture2D" uid="uid://c0hjtjf4gp4i4" path="res://Assets/Sprites/UI/VS/VSRed.png" id="2_64e7d"]
-[ext_resource type="Texture2D" uid="uid://cuq7onpn2fitn" path="res://Assets/Sprites/Characters/Empty.png" id="3_dbrt7"]
+[ext_resource type="Texture2D" uid="uid://ccqoug8pvl88t" path="res://Assets/Sprites/Characters/Squidward.png" id="3_g5syw"]
+[ext_resource type="Theme" uid="uid://cm6ff8iw874fv" path="res://Assets/Themes/text_boxes.tres" id="5_3gudk"]
+[ext_resource type="Texture2D" uid="uid://dg24qmgy47eg3" path="res://Assets/Sprites/Characters/Severed Arm.png" id="6_n7knw"]
 
 [sub_resource type="Animation" id="Animation_ex31r"]
 resource_name = "BlueSlide"
@@ -17,6 +20,7 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(0.466517, 1),
 "update": 0,
 "values": [Vector2(576, -161.625), Vector2(576, 324)]
+<<<<<<< Updated upstream
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -29,6 +33,8 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(575, 736), Vector2(575, 354)]
+=======
+>>>>>>> Stashed changes
 }
 
 [sub_resource type="Animation" id="Animation_2mefn"]
@@ -57,6 +63,102 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(576, -161.625)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Player Char 1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-236, 385)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Player Char 2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-400, 385)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Player Char 3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-570, 385)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Player Char 4:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-734, 385)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Enemy Char 1:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1174, 6)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Enemy Char 2:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1388, 6)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../Enemy Char 3:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1602, 6)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../Enemy Char 4:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1816, 6)]
+}
 
 [sub_resource type="Animation" id="Animation_ll0si"]
 resource_name = "RedSlide"
@@ -75,7 +177,11 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_wt3p5"]
 resource_name = "SlideIN"
+<<<<<<< Updated upstream
 length = 2.0
+=======
+length = 7.0
+>>>>>>> Stashed changes
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -95,10 +201,113 @@ tracks/1/path = NodePath("../VsBlue:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
+<<<<<<< Updated upstream
 "times": PackedFloat32Array(0, 0.6, 1.2),
 "transitions": PackedFloat32Array(0.466517, 0.466517, 1),
 "update": 0,
 "values": [Vector2(576, -150.115), Vector2(576, -150.115), Vector2(576, 324)]
+=======
+"times": PackedFloat32Array(0, 3.5, 4),
+"transitions": PackedFloat32Array(0.466517, 0.466517, 1),
+"update": 0,
+"values": [Vector2(576, -150.115), Vector2(576, -150.115), Vector2(576, 324)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Player Char 1:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5),
+"transitions": PackedFloat32Array(1, 0.466517, 1),
+"update": 0,
+"values": [Vector2(-236, 385), Vector2(-236, 385), Vector2(642, 385)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Player Char 2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.7),
+"transitions": PackedFloat32Array(1, 0.466517, 1),
+"update": 0,
+"values": [Vector2(-450, 385), Vector2(-450, 385), Vector2(428, 385)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Player Char 3:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.7, 0.9, 1.9),
+"transitions": PackedFloat32Array(1, 1, 0.466517, 1),
+"update": 0,
+"values": [Vector2(-664, 385), Vector2(-664, 385), Vector2(-558, 385), Vector2(214, 385)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Player Char 4:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.1, 2.1),
+"transitions": PackedFloat32Array(1, 0.466517, 1),
+"update": 0,
+"values": [Vector2(-878, 385), Vector2(-878, 385), Vector2(0, 385)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Enemy Char 1:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 4, 5),
+"transitions": PackedFloat32Array(1, 0.466517, 1),
+"update": 0,
+"values": [Vector2(1174, 6), Vector2(1174, 6), Vector2(296, 6)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../Enemy Char 2:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 4.2, 5.2),
+"transitions": PackedFloat32Array(1, 0.466516, 1),
+"update": 0,
+"values": [Vector2(1388, 6), Vector2(1388, 6), Vector2(510, 6)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../Enemy Char 3:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 4.4, 5.4),
+"transitions": PackedFloat32Array(1, 0.466517, 1),
+"update": 0,
+"values": [Vector2(1602, 6), Vector2(1602, 6), Vector2(724, 6)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../Enemy Char 4:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 4.6, 5.6),
+"transitions": PackedFloat32Array(1, 0.466516, 1),
+"update": 0,
+"values": [Vector2(1816, 6), Vector2(1816, 6), Vector2(938, 6)]
+>>>>>>> Stashed changes
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vp1cn"]
@@ -110,6 +319,11 @@ _data = {
 }
 
 [node name="vs" type="Node2D"]
+
+[node name="Vsbg" type="Sprite2D" parent="."]
+position = Vector2(600, 289)
+scale = Vector2(2.06486, 2.06487)
+texture = ExtResource("1_u0bfg")
 
 [node name="VsBlue" type="Sprite2D" parent="."]
 position = Vector2(576, -161.625)
@@ -128,15 +342,15 @@ libraries = {
 "": SubResource("AnimationLibrary_vp1cn")
 }
 
-[node name="Char 1" type="TextureRect" parent="."]
-offset_left = 24.0
-offset_top = 381.0
-offset_right = 238.0
-offset_bottom = 606.0
-texture = ExtResource("3_dbrt7")
+[node name="Player Char 1" type="TextureRect" parent="."]
+offset_left = -236.0
+offset_top = 385.0
+offset_right = -22.0
+offset_bottom = 610.0
+texture = ExtResource("3_g5syw")
 stretch_mode = 2
 
-[node name="Name" type="Label" parent="Char 1"]
+[node name="Name" type="Label" parent="Player Char 1"]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -146,6 +360,182 @@ offset_top = 222.0
 offset_right = 91.5
 offset_bottom = 269.0
 grow_horizontal = 2
+theme = ExtResource("5_3gudk")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 31
+text = "???"
+horizontal_alignment = 1
+
+[node name="Player Char 2" type="TextureRect" parent="."]
+offset_left = -400.0
+offset_top = 385.0
+offset_right = -186.0
+offset_bottom = 610.0
+texture = ExtResource("3_g5syw")
+stretch_mode = 2
+
+[node name="Name" type="Label" parent="Player Char 2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -91.5
+offset_top = 222.0
+offset_right = 91.5
+offset_bottom = 269.0
+grow_horizontal = 2
+theme = ExtResource("5_3gudk")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 31
+text = "???"
+horizontal_alignment = 1
+
+[node name="Player Char 3" type="TextureRect" parent="."]
+offset_left = -570.0
+offset_top = 385.0
+offset_right = -356.0
+offset_bottom = 610.0
+texture = ExtResource("3_g5syw")
+stretch_mode = 2
+
+[node name="Name" type="Label" parent="Player Char 3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -91.5
+offset_top = 222.0
+offset_right = 91.5
+offset_bottom = 269.0
+grow_horizontal = 2
+theme = ExtResource("5_3gudk")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 31
+text = "???"
+horizontal_alignment = 1
+
+[node name="Player Char 4" type="TextureRect" parent="."]
+offset_left = -734.0
+offset_top = 385.0
+offset_right = -520.0
+offset_bottom = 610.0
+texture = ExtResource("3_g5syw")
+stretch_mode = 2
+
+[node name="Name" type="Label" parent="Player Char 4"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -91.5
+offset_top = 222.0
+offset_right = 91.5
+offset_bottom = 269.0
+grow_horizontal = 2
+theme = ExtResource("5_3gudk")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 31
+text = "???"
+horizontal_alignment = 1
+
+[node name="Enemy Char 1" type="TextureRect" parent="."]
+offset_left = 1174.0
+offset_top = 6.0
+offset_right = 1388.0
+offset_bottom = 231.0
+texture = ExtResource("6_n7knw")
+stretch_mode = 2
+
+[node name="Name" type="Label" parent="Enemy Char 1"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -91.5
+offset_top = 222.0
+offset_right = 91.5
+offset_bottom = 269.0
+grow_horizontal = 2
+theme = ExtResource("5_3gudk")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 31
+text = "???"
+horizontal_alignment = 1
+
+[node name="Enemy Char 2" type="TextureRect" parent="."]
+offset_left = 1388.0
+offset_top = 6.0
+offset_right = 1602.0
+offset_bottom = 231.0
+texture = ExtResource("6_n7knw")
+stretch_mode = 2
+
+[node name="Name" type="Label" parent="Enemy Char 2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -91.5
+offset_top = 222.0
+offset_right = 91.5
+offset_bottom = 269.0
+grow_horizontal = 2
+theme = ExtResource("5_3gudk")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 31
+text = "???"
+horizontal_alignment = 1
+
+[node name="Enemy Char 3" type="TextureRect" parent="."]
+offset_left = 1602.0
+offset_top = 6.0
+offset_right = 1816.0
+offset_bottom = 231.0
+texture = ExtResource("6_n7knw")
+stretch_mode = 2
+
+[node name="Name" type="Label" parent="Enemy Char 3"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -91.5
+offset_top = 222.0
+offset_right = 91.5
+offset_bottom = 269.0
+grow_horizontal = 2
+theme = ExtResource("5_3gudk")
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 31
+text = "???"
+horizontal_alignment = 1
+
+[node name="Enemy Char 4" type="TextureRect" parent="."]
+offset_left = 1816.0
+offset_top = 6.0
+offset_right = 2030.0
+offset_bottom = 231.0
+texture = ExtResource("6_n7knw")
+stretch_mode = 2
+
+[node name="Name" type="Label" parent="Enemy Char 4"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -91.5
+offset_top = 222.0
+offset_right = 91.5
+offset_bottom = 269.0
+grow_horizontal = 2
+theme = ExtResource("5_3gudk")
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 31
