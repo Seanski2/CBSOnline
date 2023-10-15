@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bnvwjv3mupr44"]
+[gd_scene load_steps=13 format=3 uid="uid://bnvwjv3mupr44"]
 
 [ext_resource type="Texture2D" uid="uid://bac174kn7eyfn" path="res://Assets/Sprites/UI/VS/VSBlue.png" id="1_l15q2"]
 [ext_resource type="Texture2D" uid="uid://b5ea1ioky6620" path="res://Assets/Sprites/UI/VS/VSBG.png" id="1_u0bfg"]
@@ -304,6 +304,14 @@ _data = {
 "SlideIN": SubResource("Animation_wt3p5")
 }
 
+[sub_resource type="GDScript" id="GDScript_ssqih"]
+resource_name = "TransitionToMain"
+script/source = "extends AnimationPlayer
+
+
+# Called when the node enters the scene tree for the first time.
+"
+
 [node name="vs" type="Node2D"]
 
 [node name="Vsbg" type="Sprite2D" parent="."]
@@ -327,6 +335,7 @@ autoplay = "BlueSlide"
 libraries = {
 "": SubResource("AnimationLibrary_vp1cn")
 }
+script = SubResource("GDScript_ssqih")
 
 [node name="Player Char 1" type="TextureRect" parent="."]
 offset_left = -236.0
