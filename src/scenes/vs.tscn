@@ -331,7 +331,7 @@ texture = ExtResource("2_64e7d")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../VsRed")
-autoplay = "BlueSlide"
+autoplay = "SlideIN"
 libraries = {
 "": SubResource("AnimationLibrary_vp1cn")
 }
