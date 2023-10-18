@@ -1,12 +1,16 @@
 
-class_name Element
+class_name Elements
+
+enum Element {astral, aura, darkness, earth, electric, fire, ice, light, magic, metal, nature, paint, physical, sound, toxic, undead, water, wind, none}
 
 var jsonPath = "res://src/data/elements/"
 var jsonData = {}
 var internalName = ""
+var elem
 
-func _init(charName: String):
-	internalName = charName
+func _init(name: String):
+	internalName = name
+	elem = Element.keys()[Element.get(internalName)]
 	jsonPath = jsonPath + internalName
 	jsonData = load_json(jsonPath)
 	pass

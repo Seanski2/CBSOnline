@@ -19,6 +19,8 @@ var magic
 var magDefense
 
 var health
+var elem1
+var elem2
 
 func _init(charName: String):
 	
@@ -34,6 +36,9 @@ func _init(charName: String):
 	defense = jsonData["baseStats"]["defense"]
 	magic = jsonData["baseStats"]["magicAttack"]
 	magDefense = jsonData["baseStats"]["magicDefense"]
+	
+	elem1 = Elements.Element.keys()[Elements.Element.get(jsonData["element1"])]
+	elem2 = Elements.Element.keys()[Elements.Element.get(jsonData["element2"])]
 
 	health = maxHealth
 	
