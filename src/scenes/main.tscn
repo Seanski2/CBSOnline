@@ -2747,7 +2747,8 @@ theme_override_constants/outline_size = 3
 theme_override_font_sizes/font_size = 18
 text = "This is a move description wowie zowie that's crazy woahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh ok i'm done lol"
 autowrap_mode = 2
-visible_ratio = -0.00806452
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="MP Cost" type="RichTextLabel" parent="Skills Menu/Skill Description"]
 layout_mode = 0

@@ -25,8 +25,8 @@ func _pressed():
 		selectionObjects[CSSMenuVars.teamSelected].visible = true;
 		
 		var charData = Character.new(get_meta("CharacterId") + ".json");
-		var elem1 = Element.new(charData.jsonData.element1 + ".json");
-		var elem2 = Element.new(charData.jsonData.element2 + ".json");
+		var elem1 = Elements.new(charData.jsonData.element1);
+		var elem2 = Elements.new(charData.jsonData.element2);
 		
 		characterDisplays[CSSMenuVars.teamSelected].get_node("Name").text = charData.jsonData.displayName
 		
